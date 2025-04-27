@@ -3,10 +3,11 @@ import time
 import json
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+import threading
 from datetime import datetime
 from yara_scanner import scan_file
 
-# Optional extras:
+# Optional extras
 try:
     import winsound  # For alert beep (Windows only)
 except ImportError:
@@ -38,8 +39,12 @@ else:
 
 event_counter = 0
 start_time = time.time()
+lock = threading.Lock()
 
 def process_initial_scan_event(file_path):
+    """Handles YARA scan for initial files at startup."""
+    global event_counter
+
     event_info = {
         "event_type": "initial_scan",
         "src_path": file_path,
@@ -49,67 +54,57 @@ def process_initial_scan_event(file_path):
     matches = scan_file(file_path)
     if matches:
         event_info["yara_matches"] = matches
+
         if Fore:
-            print(Fore.YELLOW + f"[!] YARA Match found during initial scan in {file_path}: {matches}" + Style.RESET_ALL)
+            print(Fore.RED + f"[!] YARA Match found in {file_path}: {matches}" + Style.RESET_ALL)
         else:
-            print(f"[!] YARA Match found during initial scan in {file_path}: {matches}")
-    else:
-        print(event_info)
-
-    all_events.append(event_info)
-
-def process_event(event_type, file_path):
-    global event_counter
-
-    if event_counter >= MAX_EVENTS:
-        return
-
-    event_info = {
-        "event_type": event_type,
-        "src_path": file_path,
-        "timestamp": datetime.now().isoformat()
-    }
-
-    # Run YARA scan
-    try:
-        matches = scan_file(file_path)
-        if matches:
-            event_info["yara_matches"] = matches
-            if Fore:
-                print(Fore.RED + f"[!] YARA Match found in {file_path}: {matches}" + Style.RESET_ALL)
-            else:
-                print(f"[!] YARA Match found in {file_path}: {matches}")
-    except Exception as e:
-        print(f"[ERROR] Failed to scan file {file_path}: {e}")
-
+            print(f"[!] YARA Match found in {file_path}: {matches}")
+        
         if winsound:
             winsound.Beep(1000, 300)
     else:
         print(event_info)
 
-    all_events.append(event_info)
-    event_counter += 1
+    with lock:
+        all_events.append(event_info)
+        event_counter += 1
 
-    # Save updated log
-    with open(log_path, "w") as f:
-        json.dump(all_events, f, indent=4)
+        with open(log_path, "w") as f:
+            json.dump(all_events, f, indent=4)
 
 class FileEventHandler(FileSystemEventHandler):
-    def on_created(self, event):
-        if not event.is_directory:
-            process_event("created", event.src_path)
+    def on_any_event(self, event):
+        global event_counter
 
-    def on_modified(self, event):
-        if not event.is_directory:
-            process_event("modified", event.src_path)
+        if event.is_directory or event_counter >= MAX_EVENTS:
+            return
 
-    def on_moved(self, event):
-        if not event.is_directory:
-            process_event("moved", event.dest_path)
+        event_info = {
+            "event_type": event.event_type,
+            "src_path": event.src_path,
+            "timestamp": datetime.now().isoformat()
+        }
 
-    def on_deleted(self, event):
-        if not event.is_directory:
-            process_event("deleted", event.src_path)
+        matches = scan_file(event.src_path)
+        if matches:
+            event_info["yara_matches"] = matches
+
+            if Fore:
+                print(Fore.RED + f"[!] YARA Match found in {event.src_path}: {matches}" + Style.RESET_ALL)
+            else:
+                print(f"[!] YARA Match found in {event.src_path}: {matches}")
+
+            if winsound:
+                winsound.Beep(1000, 300)
+        else:
+            print(event_info)
+
+        with lock:
+            all_events.append(event_info)
+            event_counter += 1
+
+            with open(log_path, "w") as f:
+                json.dump(all_events, f, indent=4)
 
 if __name__ == "__main__":
     path = "."  # Monitor current directory
@@ -117,14 +112,13 @@ if __name__ == "__main__":
     observer = Observer()
     observer.schedule(event_handler, path, recursive=True)
     observer.start()
-
     print(f"[INFO] Monitoring '{os.path.abspath(path)}' for {MAX_DURATION_SECONDS}s or {MAX_EVENTS} events...")
 
-    # 🔁 Scan all files in the folder once at start
-    process_initial_scan_event(full_path)
-    for file in files:
-            full_path = os.path.join(root, file)
-            process_event("initial_scan", full_path)
+    # ➔ Initial YARA Scan
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            file_path = os.path.join(root, file)
+            process_initial_scan_event(file_path)
 
     try:
         while (time.time() - start_time) < MAX_DURATION_SECONDS and event_counter < MAX_EVENTS:

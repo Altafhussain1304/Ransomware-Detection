@@ -19,7 +19,7 @@ else:
     logs = []
 
 MAX_LOGS = 100
-MAX_DURATION_SECONDS = 30
+MAX_DURATION_SECONDS = 20
 
 start_time = time.time()
 log_count = 0
