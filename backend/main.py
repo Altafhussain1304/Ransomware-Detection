@@ -1,47 +1,41 @@
-import psutil
-import json
-from datetime import datetime
 import os
+import subprocess
+import psutil
+from datetime import datetime
+import time
+import sys
 
-# Define the log directory and file
-LOG_DIR = "../data/logs"
-os.makedirs(LOG_DIR, exist_ok=True)
-log_file = os.path.join(LOG_DIR, "process_log.json")
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
-def log_processes():
-    """
-    Logs the current running processes into a JSON file.
-    Ensures the file is a valid JSON array and appends new logs.
-    """
-    processes = []
-    for proc in psutil.process_iter(['pid', 'name', 'username']):
-        try:
-            # Collect process information
-            info = proc.info
-            info["timestamp"] = datetime.now().isoformat()
-            processes.append(info)
-        except (psutil.NoSuchProcess, psutil.AccessDenied):
-            # Skip processes that cannot be accessed
-            continue
+def main_menu():
+    while True:
+        clear_screen()
+        print("==== RansomSaver - Main Menu ====")
+        print("1. Start File Monitoring")
+        print("2. Start Process Monitoring")
+        print("3. Start System Monitoring")
+        print("4. Start Network Monitoring")
+        print("5. Exit")
+        choice = input("Enter your choice: ").strip()
 
-    # Read existing data from the log file
-    try:
-        with open(log_file, "r") as f:
-            existing_data = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        # If the file doesn't exist or is invalid, start with an empty list
-        existing_data = []
-
-    # Append new process data to the existing data
-    existing_data.extend(processes)
-
-    # Write the updated data back to the log file as a valid JSON array
-    with open(log_file, "w") as f:
-        json.dump(existing_data, f, indent=4)
-
-    print(f"Logged {len(processes)} processes to {log_file}")
+        if choice == "1":
+            subprocess.run([sys.executable, "file_monitor.py"])
+        elif choice == "2":
+            subprocess.run([sys.executable, "process_monitor.py"])
+        elif choice == "3":
+            subprocess.run([sys.executable, "system_monitor.py"])
+        elif choice == "4":
+            subprocess.run([sys.executable, "network_monitor.py"])
+        elif choice == "5":
+            print("Exiting RansomSaver Goodbye!")
+            time.sleep(1)
+            break
+        else:
+            print("Invalid choice. Please select a valid option.")
+            time.sleep(2)
 
 if __name__ == "__main__":
-    print("Starting process logging...")
-    log_processes()
-    print("Process logging completed.")
+    main_menu()
+
+

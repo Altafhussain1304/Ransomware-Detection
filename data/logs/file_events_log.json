@@ -1,133 +1,21 @@
 [
     {
-        "event_type": "created",
-        "src_path": ".\\text.txt",
-        "timestamp": "2025-04-23T16:57:56.768763"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\text.txt",
-        "timestamp": "2025-04-23T16:58:10.832565"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\text.txt",
-        "timestamp": "2025-04-23T16:58:10.833969"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\text.txt",
-        "timestamp": "2025-04-23T16:58:10.837747"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\text.txt",
-        "timestamp": "2025-04-23T16:58:13.628970"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\text.txt",
-        "timestamp": "2025-04-23T16:58:13.635847"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\text.txt",
-        "timestamp": "2025-04-23T16:58:13.643006"
-    },
-    {
-        "event_type": "deleted",
-        "src_path": ".\\text.txt",
-        "timestamp": "2025-04-23T16:58:37.186445"
-    },
-    {
-        "event_type": "created",
-        "src_path": ".\\test.txt",
-        "timestamp": "2025-04-24T12:13:17.199502"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\test.txt",
-        "timestamp": "2025-04-24T12:13:23.791796"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\test.txt",
-        "timestamp": "2025-04-24T12:13:23.793230"
-    },
-    {
-        "event_type": "deleted",
-        "src_path": ".\\test.txt",
-        "timestamp": "2025-04-24T12:13:34.780630"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\testfile.txt",
-        "timestamp": "2025-04-25T11:50:50.883193"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\testfile.txt",
-        "timestamp": "2025-04-25T11:50:50.922749"
-    },
-    {
-        "event_type": "created",
-        "src_path": ".\\dummy_test.txt",
-        "timestamp": "2025-04-25T19:56:58.638884"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\dummy_test.txt",
-        "timestamp": "2025-04-25T19:56:58.645879"
-    },
-    {
-        "event_type": "created",
-        "src_path": ".\\test123.txt",
-        "timestamp": "2025-04-25T19:59:46.274905"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\test123.txt",
-        "timestamp": "2025-04-25T19:59:46.309041"
-    },
-    {
-        "event_type": "created",
-        "src_path": ".\\test_note.txt",
-        "timestamp": "2025-04-26T10:20:53.833453"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\test_note.txt",
-        "timestamp": "2025-04-26T10:20:53.851293"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\test_note.txt",
-        "timestamp": "2025-04-26T10:25:58.037063"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\test_note.txt",
-        "timestamp": "2025-04-26T10:25:58.041767"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\test_note.txt",
-        "timestamp": "2025-04-26T10:31:18.256286"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\test_note.txt",
-        "timestamp": "2025-04-26T10:31:18.277520"
-    },
-    {
         "event_type": "initial_scan",
         "src_path": ".\\file_monitor.py",
-        "timestamp": "2025-04-26T11:20:51.770132"
+        "timestamp": "2025-04-28T17:52:24.429300"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\generate_test_file.py",
+        "timestamp": "2025-04-28T17:52:24.429300",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\generate_test_file.py",
-        "timestamp": "2025-04-26T11:20:51.790106",
+        "timestamp": "2025-04-28T17:52:24.429300",
         "yara_matches": [
             "SuspiciousFileNames"
         ]
@@ -135,88 +23,42 @@
     {
         "event_type": "initial_scan",
         "src_path": ".\\main.py",
-        "timestamp": "2025-04-26T11:20:52.097322"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\main.py",
-        "timestamp": "2025-04-26T11:20:52.099367"
+        "timestamp": "2025-04-28T17:52:24.749776"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\network_monitor.py",
-        "timestamp": "2025-04-26T11:20:52.099367"
+        "timestamp": "2025-04-28T17:52:24.753762"
     },
     {
         "event_type": "modified",
         "src_path": ".\\network_monitor.py",
-        "timestamp": "2025-04-26T11:20:52.107222"
-    },
-    {
-        "event_type": "initial_scan",
-        "src_path": ".\\system_monitor.py",
-        "timestamp": "2025-04-26T11:20:52.107222"
-    },
-    {
-        "event_type": "modified",
-        "src_path": ".\\system_monitor.py",
-        "timestamp": "2025-04-26T11:20:52.111130"
-    },
-    {
-        "event_type": "initial_scan",
-        "src_path": ".\\test_note.txt",
-        "timestamp": "2025-04-26T11:20:52.112603",
-        "yara_matches": [
-            "SuspiciousFileNames"
-        ]
-    },
-    {
-        "event_type": "initial_scan",
-        "src_path": ".\\yara_scanner.py",
-        "timestamp": "2025-04-26T11:20:52.432827"
-    },
-    {
-        "event_type": "initial_scan",
-        "src_path": ".\\__pycache__\\yara_scanner.cpython-312.pyc",
-        "timestamp": "2025-04-26T11:20:52.433876"
-    },
-    {
-        "event_type": "initial_scan",
-        "src_path": ".\\file_monitor.py",
-        "timestamp": "2025-04-27T10:51:20.092632"
-    },
-    {
-        "event_type": "initial_scan",
-        "src_path": ".\\generate_test_file.py",
-        "timestamp": "2025-04-27T10:51:20.132220",
-        "yara_matches": [
-            "SuspiciousFileNames"
-        ]
-    },
-    {
-        "event_type": "initial_scan",
-        "src_path": ".\\main.py",
-        "timestamp": "2025-04-27T10:51:20.446077"
-    },
-    {
-        "event_type": "initial_scan",
-        "src_path": ".\\network_monitor.py",
-        "timestamp": "2025-04-27T10:51:20.450794"
+        "timestamp": "2025-04-28T17:52:24.756075"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\process_monitor.py",
-        "timestamp": "2025-04-27T10:51:20.461166"
+        "timestamp": "2025-04-28T17:52:24.757815"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\process_monitor.py",
+        "timestamp": "2025-04-28T17:52:24.761047"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\system_monitor.py",
-        "timestamp": "2025-04-27T10:51:20.470006"
+        "timestamp": "2025-04-28T17:52:24.763590"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\system_monitor.py",
+        "timestamp": "2025-04-28T17:52:24.765423"
     },
     {
         "event_type": "modified",
         "src_path": ".\\test_note.txt",
-        "timestamp": "2025-04-27T10:51:20.509778",
+        "timestamp": "2025-04-28T17:52:24.772022",
         "yara_matches": [
             "SuspiciousFileNames"
         ]
@@ -224,7 +66,7 @@
     {
         "event_type": "initial_scan",
         "src_path": ".\\test_note.txt",
-        "timestamp": "2025-04-27T10:51:20.479919",
+        "timestamp": "2025-04-28T17:52:24.767450",
         "yara_matches": [
             "SuspiciousFileNames"
         ]
@@ -232,22 +74,27 @@
     {
         "event_type": "initial_scan",
         "src_path": ".\\yara_scanner.py",
-        "timestamp": "2025-04-27T10:51:20.827638"
+        "timestamp": "2025-04-28T17:52:25.087279"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\yara_scanner.py",
+        "timestamp": "2025-04-28T17:52:25.089294"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\__pycache__\\yara_scanner.cpython-312.pyc",
-        "timestamp": "2025-04-27T10:51:20.839281"
+        "timestamp": "2025-04-28T17:52:25.093069"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\file_monitor.py",
-        "timestamp": "2025-04-27T10:53:50.920033"
+        "timestamp": "2025-04-28T18:04:05.587156"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\generate_test_file.py",
-        "timestamp": "2025-04-27T10:53:50.920033",
+        "timestamp": "2025-04-28T18:04:05.587156",
         "yara_matches": [
             "SuspiciousFileNames"
         ]
@@ -255,27 +102,27 @@
     {
         "event_type": "initial_scan",
         "src_path": ".\\main.py",
-        "timestamp": "2025-04-27T10:53:51.242974"
+        "timestamp": "2025-04-28T18:04:05.900836"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\network_monitor.py",
-        "timestamp": "2025-04-27T10:53:51.245866"
+        "timestamp": "2025-04-28T18:04:05.905295"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\process_monitor.py",
-        "timestamp": "2025-04-27T10:53:51.245866"
+        "timestamp": "2025-04-28T18:04:05.905295"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\system_monitor.py",
-        "timestamp": "2025-04-27T10:53:51.258143"
+        "timestamp": "2025-04-28T18:04:05.913363"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\test_note.txt",
-        "timestamp": "2025-04-27T10:53:51.258143",
+        "timestamp": "2025-04-28T18:04:05.913363",
         "yara_matches": [
             "SuspiciousFileNames"
         ]
@@ -283,11 +130,62 @@
     {
         "event_type": "initial_scan",
         "src_path": ".\\yara_scanner.py",
-        "timestamp": "2025-04-27T10:53:51.580105"
+        "timestamp": "2025-04-28T18:04:06.229577"
     },
     {
         "event_type": "initial_scan",
         "src_path": ".\\__pycache__\\yara_scanner.cpython-312.pyc",
-        "timestamp": "2025-04-27T10:53:51.580105"
+        "timestamp": "2025-04-28T18:04:06.233376"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\file_monitor.py",
+        "timestamp": "2025-04-28T18:05:39.285564"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\generate_test_file.py",
+        "timestamp": "2025-04-28T18:05:39.285564",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\main.py",
+        "timestamp": "2025-04-28T18:05:39.606920"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\network_monitor.py",
+        "timestamp": "2025-04-28T18:05:39.613063"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\process_monitor.py",
+        "timestamp": "2025-04-28T18:05:39.615089"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\system_monitor.py",
+        "timestamp": "2025-04-28T18:05:39.615089"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\test_note.txt",
+        "timestamp": "2025-04-28T18:05:39.624621",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\yara_scanner.py",
+        "timestamp": "2025-04-28T18:05:39.930975"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\__pycache__\\yara_scanner.cpython-312.pyc",
+        "timestamp": "2025-04-28T18:05:39.936716"
     }
 ]
