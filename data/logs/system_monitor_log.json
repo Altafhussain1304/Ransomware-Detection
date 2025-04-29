@@ -1,222 +1,222 @@
 [
     {
-        "cpu_percent": 3.6,
+        "cpu_percent": 21.1,
         "memory": {
             "total": 16840847360,
-            "available": 8500142080,
-            "percent": 49.5,
-            "used": 8340705280,
-            "free": 8500142080
+            "available": 7777804288,
+            "percent": 53.8,
+            "used": 9063043072,
+            "free": 7777804288
         },
-        "timestamp": "2025-04-28 17:53:32"
+        "timestamp": "2025-04-29 15:19:07"
     },
     {
-        "cpu_percent": 19.2,
+        "cpu_percent": 19.1,
         "memory": {
             "total": 16840847360,
-            "available": 8503627776,
-            "percent": 49.5,
-            "used": 8337219584,
-            "free": 8503627776
+            "available": 7777112064,
+            "percent": 53.8,
+            "used": 9063735296,
+            "free": 7777112064
         },
-        "timestamp": "2025-04-28 17:53:33"
+        "timestamp": "2025-04-29 15:19:08"
+    },
+    {
+        "cpu_percent": 17.8,
+        "memory": {
+            "total": 16840847360,
+            "available": 7771234304,
+            "percent": 53.9,
+            "used": 9069613056,
+            "free": 7771234304
+        },
+        "timestamp": "2025-04-29 15:19:09"
+    },
+    {
+        "cpu_percent": 21.5,
+        "memory": {
+            "total": 16840847360,
+            "available": 7764885504,
+            "percent": 53.9,
+            "used": 9075961856,
+            "free": 7764885504
+        },
+        "timestamp": "2025-04-29 15:19:10"
+    },
+    {
+        "cpu_percent": 37.2,
+        "memory": {
+            "total": 16840847360,
+            "available": 7760322560,
+            "percent": 53.9,
+            "used": 9080524800,
+            "free": 7760322560
+        },
+        "timestamp": "2025-04-29 15:19:11"
+    },
+    {
+        "cpu_percent": 30.1,
+        "memory": {
+            "total": 16840847360,
+            "available": 7805390848,
+            "percent": 53.7,
+            "used": 9035456512,
+            "free": 7805390848
+        },
+        "timestamp": "2025-04-29 15:19:12"
+    },
+    {
+        "cpu_percent": 30.5,
+        "memory": {
+            "total": 16840847360,
+            "available": 7780843520,
+            "percent": 53.8,
+            "used": 9060003840,
+            "free": 7780843520
+        },
+        "timestamp": "2025-04-29 15:19:13"
+    },
+    {
+        "cpu_percent": 8.1,
+        "memory": {
+            "total": 16840847360,
+            "available": 7795544064,
+            "percent": 53.7,
+            "used": 9045303296,
+            "free": 7795544064
+        },
+        "timestamp": "2025-04-29 15:19:14"
+    },
+    {
+        "cpu_percent": 7.2,
+        "memory": {
+            "total": 16840847360,
+            "available": 7795036160,
+            "percent": 53.7,
+            "used": 9045811200,
+            "free": 7795036160
+        },
+        "timestamp": "2025-04-29 15:19:15"
     },
     {
         "cpu_percent": 5.3,
         "memory": {
             "total": 16840847360,
-            "available": 8505266176,
-            "percent": 49.5,
-            "used": 8335581184,
-            "free": 8505266176
+            "available": 7794184192,
+            "percent": 53.7,
+            "used": 9046663168,
+            "free": 7794184192
         },
-        "timestamp": "2025-04-28 17:53:34"
+        "timestamp": "2025-04-29 15:19:16"
     },
     {
-        "cpu_percent": 2.8,
+        "cpu_percent": 4.5,
         "memory": {
             "total": 16840847360,
-            "available": 8528740352,
-            "percent": 49.4,
-            "used": 8312107008,
-            "free": 8528740352
+            "available": 7795367936,
+            "percent": 53.7,
+            "used": 9045479424,
+            "free": 7795367936
         },
-        "timestamp": "2025-04-28 17:53:35"
+        "timestamp": "2025-04-29 15:19:17"
     },
     {
-        "cpu_percent": 6.1,
+        "cpu_percent": 3.7,
         "memory": {
             "total": 16840847360,
-            "available": 8524058624,
-            "percent": 49.4,
-            "used": 8316788736,
-            "free": 8524058624
+            "available": 7795761152,
+            "percent": 53.7,
+            "used": 9045086208,
+            "free": 7795761152
         },
-        "timestamp": "2025-04-28 17:53:36"
+        "timestamp": "2025-04-29 15:19:18"
     },
     {
-        "cpu_percent": 10.2,
+        "cpu_percent": 7.3,
         "memory": {
             "total": 16840847360,
-            "available": 8527187968,
-            "percent": 49.4,
-            "used": 8313659392,
-            "free": 8527187968
+            "available": 7797346304,
+            "percent": 53.7,
+            "used": 9043501056,
+            "free": 7797346304
         },
-        "timestamp": "2025-04-28 17:53:37"
+        "timestamp": "2025-04-29 15:19:19"
     },
     {
-        "cpu_percent": 8.5,
+        "cpu_percent": 18.4,
         "memory": {
             "total": 16840847360,
-            "available": 8530010112,
-            "percent": 49.3,
-            "used": 8310837248,
-            "free": 8530010112
+            "available": 8300601344,
+            "percent": 50.7,
+            "used": 8540246016,
+            "free": 8300601344
         },
-        "timestamp": "2025-04-28 17:53:38"
+        "timestamp": "2025-04-29 15:19:20"
     },
     {
-        "cpu_percent": 7.5,
+        "cpu_percent": 25.2,
         "memory": {
             "total": 16840847360,
-            "available": 8498429952,
-            "percent": 49.5,
-            "used": 8342417408,
-            "free": 8498429952
+            "available": 8313487360,
+            "percent": 50.6,
+            "used": 8527360000,
+            "free": 8313487360
         },
-        "timestamp": "2025-04-28 17:53:39"
+        "timestamp": "2025-04-29 15:19:21"
     },
     {
-        "cpu_percent": 9.4,
+        "cpu_percent": 12.5,
         "memory": {
             "total": 16840847360,
-            "available": 8485793792,
-            "percent": 49.6,
-            "used": 8355053568,
-            "free": 8485793792
+            "available": 8313823232,
+            "percent": 50.6,
+            "used": 8527024128,
+            "free": 8313823232
         },
-        "timestamp": "2025-04-28 17:53:40"
+        "timestamp": "2025-04-29 15:19:22"
     },
     {
-        "cpu_percent": 29.4,
+        "cpu_percent": 9.1,
         "memory": {
             "total": 16840847360,
-            "available": 8455794688,
-            "percent": 49.8,
-            "used": 8385052672,
-            "free": 8455794688
+            "available": 8315305984,
+            "percent": 50.6,
+            "used": 8525541376,
+            "free": 8315305984
         },
-        "timestamp": "2025-04-28 17:53:41"
+        "timestamp": "2025-04-29 15:19:23"
     },
     {
-        "cpu_percent": 11.5,
+        "cpu_percent": 7.6,
         "memory": {
             "total": 16840847360,
-            "available": 8434270208,
-            "percent": 49.9,
-            "used": 8406577152,
-            "free": 8434270208
+            "available": 8328060928,
+            "percent": 50.5,
+            "used": 8512786432,
+            "free": 8328060928
         },
-        "timestamp": "2025-04-28 17:53:42"
+        "timestamp": "2025-04-29 15:19:24"
     },
     {
-        "cpu_percent": 8.5,
+        "cpu_percent": 21.3,
         "memory": {
             "total": 16840847360,
-            "available": 8438284288,
-            "percent": 49.9,
-            "used": 8402563072,
-            "free": 8438284288
+            "available": 8300204032,
+            "percent": 50.7,
+            "used": 8540643328,
+            "free": 8300204032
         },
-        "timestamp": "2025-04-28 17:53:43"
+        "timestamp": "2025-04-29 15:19:25"
     },
     {
-        "cpu_percent": 11.2,
+        "cpu_percent": 17.2,
         "memory": {
             "total": 16840847360,
-            "available": 8444063744,
-            "percent": 49.9,
-            "used": 8396783616,
-            "free": 8444063744
+            "available": 8311554048,
+            "percent": 50.6,
+            "used": 8529293312,
+            "free": 8311554048
         },
-        "timestamp": "2025-04-28 17:53:44"
-    },
-    {
-        "cpu_percent": 6.5,
-        "memory": {
-            "total": 16840847360,
-            "available": 8438206464,
-            "percent": 49.9,
-            "used": 8402640896,
-            "free": 8438206464
-        },
-        "timestamp": "2025-04-28 17:53:45"
-    },
-    {
-        "cpu_percent": 4.1,
-        "memory": {
-            "total": 16840847360,
-            "available": 8437837824,
-            "percent": 49.9,
-            "used": 8403009536,
-            "free": 8437837824
-        },
-        "timestamp": "2025-04-28 17:53:46"
-    },
-    {
-        "cpu_percent": 1.6,
-        "memory": {
-            "total": 16840847360,
-            "available": 8456380416,
-            "percent": 49.8,
-            "used": 8384466944,
-            "free": 8456380416
-        },
-        "timestamp": "2025-04-28 17:53:47"
-    },
-    {
-        "cpu_percent": 2.0,
-        "memory": {
-            "total": 16840847360,
-            "available": 8464498688,
-            "percent": 49.7,
-            "used": 8376348672,
-            "free": 8464498688
-        },
-        "timestamp": "2025-04-28 17:53:48"
-    },
-    {
-        "cpu_percent": 3.3,
-        "memory": {
-            "total": 16840847360,
-            "available": 8472850432,
-            "percent": 49.7,
-            "used": 8367996928,
-            "free": 8472850432
-        },
-        "timestamp": "2025-04-28 17:53:49"
-    },
-    {
-        "cpu_percent": 1.8,
-        "memory": {
-            "total": 16840847360,
-            "available": 8473227264,
-            "percent": 49.7,
-            "used": 8367620096,
-            "free": 8473227264
-        },
-        "timestamp": "2025-04-28 17:53:50"
-    },
-    {
-        "cpu_percent": 1.8,
-        "memory": {
-            "total": 16840847360,
-            "available": 8475992064,
-            "percent": 49.7,
-            "used": 8364855296,
-            "free": 8475992064
-        },
-        "timestamp": "2025-04-28 17:53:51"
+        "timestamp": "2025-04-29 15:19:26"
     }
 ]

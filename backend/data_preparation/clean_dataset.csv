@@ -1,0 +1,196 @@
+type,name,event_type,yara_match,extra,timestamp,label
+file_events,file_monitor.py,initial_scan,,,2025-04-28T17:52:24.429300,benign
+file_events,generate_test_file.py,modified,,,2025-04-28T17:52:24.429300,benign
+file_events,generate_test_file.py,initial_scan,,,2025-04-28T17:52:24.429300,benign
+file_events,main.py,initial_scan,,,2025-04-28T17:52:24.749776,benign
+file_events,network_monitor.py,initial_scan,,,2025-04-28T17:52:24.753762,benign
+file_events,network_monitor.py,modified,,,2025-04-28T17:52:24.756075,benign
+file_events,process_monitor.py,initial_scan,,,2025-04-28T17:52:24.757815,benign
+file_events,process_monitor.py,modified,,,2025-04-28T17:52:24.761047,benign
+file_events,system_monitor.py,initial_scan,,,2025-04-28T17:52:24.763590,benign
+file_events,system_monitor.py,modified,,,2025-04-28T17:52:24.765423,benign
+file_events,test_note.txt,modified,,,2025-04-28T17:52:24.772022,benign
+file_events,test_note.txt,initial_scan,,,2025-04-28T17:52:24.767450,benign
+file_events,yara_scanner.py,initial_scan,,,2025-04-28T17:52:25.087279,benign
+file_events,yara_scanner.py,modified,,,2025-04-28T17:52:25.089294,benign
+file_events,yara_scanner.cpython-312.pyc,initial_scan,,,2025-04-28T17:52:25.093069,benign
+file_events,file_monitor.py,initial_scan,,,2025-04-28T18:04:05.587156,benign
+file_events,generate_test_file.py,initial_scan,,,2025-04-28T18:04:05.587156,benign
+file_events,main.py,initial_scan,,,2025-04-28T18:04:05.900836,benign
+file_events,network_monitor.py,initial_scan,,,2025-04-28T18:04:05.905295,benign
+file_events,process_monitor.py,initial_scan,,,2025-04-28T18:04:05.905295,benign
+file_events,system_monitor.py,initial_scan,,,2025-04-28T18:04:05.913363,benign
+file_events,test_note.txt,initial_scan,,,2025-04-28T18:04:05.913363,benign
+file_events,yara_scanner.py,initial_scan,,,2025-04-28T18:04:06.229577,benign
+file_events,yara_scanner.cpython-312.pyc,initial_scan,,,2025-04-28T18:04:06.233376,benign
+file_events,file_monitor.py,initial_scan,,,2025-04-28T18:05:39.285564,benign
+file_events,generate_test_file.py,initial_scan,,,2025-04-28T18:05:39.285564,benign
+file_events,main.py,initial_scan,,,2025-04-28T18:05:39.606920,benign
+file_events,network_monitor.py,initial_scan,,,2025-04-28T18:05:39.613063,benign
+file_events,process_monitor.py,initial_scan,,,2025-04-28T18:05:39.615089,benign
+file_events,system_monitor.py,initial_scan,,,2025-04-28T18:05:39.615089,benign
+file_events,test_note.txt,initial_scan,,,2025-04-28T18:05:39.624621,benign
+file_events,yara_scanner.py,initial_scan,,,2025-04-28T18:05:39.930975,benign
+file_events,yara_scanner.cpython-312.pyc,initial_scan,,,2025-04-28T18:05:39.936716,benign
+file_events,file_monitor.py,initial_scan,,,2025-04-29T10:02:17.074232,benign
+file_events,generate_test_file.py,initial_scan,,,2025-04-29T10:02:17.078962,benign
+file_events,main.py,initial_scan,,,2025-04-29T10:02:17.382753,benign
+file_events,network_monitor.py,initial_scan,,,2025-04-29T10:02:17.382753,benign
+file_events,process_monitor.py,initial_scan,,,2025-04-29T10:02:17.382753,benign
+file_events,system_monitor.py,initial_scan,,,2025-04-29T10:02:17.401402,benign
+file_events,test_note.txt,initial_scan,,,2025-04-29T10:02:17.407102,benign
+file_events,yara_scanner.py,initial_scan,,,2025-04-29T10:02:17.723368,benign
+file_events,yara_scanner.cpython-312.pyc,initial_scan,,,2025-04-29T10:02:17.728779,benign
+file_events,file_monitor.py,initial_scan,,,2025-04-29T11:04:19.893687,benign
+file_events,generate_test_file.py,modified,,,2025-04-29T11:04:19.899328,benign
+file_events,generate_test_file.py,initial_scan,,,2025-04-29T11:04:19.896318,benign
+file_events,main.py,initial_scan,,,2025-04-29T11:04:20.213624,benign
+file_events,network_monitor.py,initial_scan,,,2025-04-29T11:04:20.217646,benign
+file_events,process_monitor.py,initial_scan,,,2025-04-29T11:04:20.219668,benign
+file_events,process_monitor.py,modified,,,2025-04-29T11:04:20.219668,benign
+file_events,system_monitor.py,initial_scan,,,2025-04-29T11:04:20.225384,benign
+file_events,system_monitor.py,modified,,,2025-04-29T11:04:20.225384,benign
+file_events,test_note.txt,initial_scan,,,2025-04-29T11:04:20.230733,benign
+file_events,test_note.txt,modified,,,2025-04-29T11:04:20.236954,benign
+file_events,yara_scanner.py,initial_scan,,,2025-04-29T11:04:20.552527,benign
+file_events,yara_scanner.py,modified,,,2025-04-29T11:04:20.558167,benign
+file_events,feature_extractor.py,initial_scan,,,2025-04-29T11:04:20.558167,benign
+file_events,yara_scanner.cpython-312.pyc,initial_scan,,,2025-04-29T11:04:20.575648,benign
+file_events,file_monitor.py,initial_scan,,,2025-04-29T11:14:54.901482,benign
+file_events,generate_test_file.py,initial_scan,,,2025-04-29T11:14:54.916417,benign
+file_events,main.py,initial_scan,,,2025-04-29T11:14:55.219541,benign
+file_events,network_monitor.py,initial_scan,,,2025-04-29T11:14:55.219541,benign
+file_events,process_monitor.py,initial_scan,,,2025-04-29T11:14:55.237309,benign
+file_events,system_monitor.py,initial_scan,,,2025-04-29T11:14:55.247279,benign
+file_events,test_note.txt,initial_scan,,,2025-04-29T11:14:55.254214,benign
+file_events,yara_scanner.py,initial_scan,,,2025-04-29T11:14:55.566051,benign
+file_events,feature_extractor.py,initial_scan,,,2025-04-29T11:14:55.569086,benign
+file_events,yara_scanner.cpython-312.pyc,initial_scan,,,2025-04-29T11:14:55.583672,benign
+file_events,file_monitor.py,initial_scan,,,2025-04-29T15:17:40.772428,benign
+file_events,generate_test_file.py,initial_scan,,,2025-04-29T15:17:40.780310,benign
+file_events,main.py,initial_scan,,,2025-04-29T15:17:41.095308,benign
+file_events,network_monitor.py,initial_scan,,,2025-04-29T15:17:41.095308,benign
+file_events,process_monitor.py,initial_scan,,,2025-04-29T15:17:41.095308,benign
+file_events,system_monitor.py,initial_scan,,,2025-04-29T15:17:41.095308,benign
+file_events,test_note.txt,initial_scan,,,2025-04-29T15:17:41.110965,benign
+file_events,yara_scanner.py,initial_scan,,,2025-04-29T15:17:41.424837,benign
+file_events,clean_dataset.py,initial_scan,,,2025-04-29T15:17:41.424837,benign
+file_events,feature_extractor.py,initial_scan,,,2025-04-29T15:17:41.740355,benign
+file_events,yara_scanner.cpython-312.pyc,initial_scan,,,2025-04-29T15:17:41.745515,benign
+file_events,file_monitor.py,initial_scan,,,2025-04-29T15:18:33.759879,benign
+file_events,generate_test_file.py,initial_scan,,,2025-04-29T15:18:33.759879,benign
+file_events,main.py,initial_scan,,,2025-04-29T15:18:34.086299,benign
+file_events,network_monitor.py,initial_scan,,,2025-04-29T15:18:34.086299,benign
+file_events,process_monitor.py,initial_scan,,,2025-04-29T15:18:34.086299,benign
+file_events,system_monitor.py,initial_scan,,,2025-04-29T15:18:34.086299,benign
+file_events,test_note.txt,initial_scan,,,2025-04-29T15:18:34.102088,benign
+file_events,yara_scanner.py,initial_scan,,,2025-04-29T15:18:34.408998,benign
+file_events,clean_dataset.py,initial_scan,,,2025-04-29T15:18:34.412937,benign
+file_events,feature_extractor.py,initial_scan,,,2025-04-29T15:18:34.722515,benign
+file_events,yara_scanner.cpython-312.pyc,initial_scan,,,2025-04-29T15:18:34.726514,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:53:56,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:53:57,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:53:58,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:53:59,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:00,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:01,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:02,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:03,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:04,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:05,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:06,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:07,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:08,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:09,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:10,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:11,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:12,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:13,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:14,benign
+network_monitor,unknown,unknown,,,2025-04-28 17:54:15,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:28,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:29,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:30,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:31,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:33,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:34,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:35,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:36,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:37,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:38,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:39,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:40,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:41,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:42,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:43,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:44,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:45,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:46,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:47,benign
+network_monitor,unknown,unknown,,,2025-04-29 10:03:48,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:26,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:27,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:28,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:29,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:30,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:31,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:32,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:33,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:34,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:35,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:36,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:37,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:38,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:39,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:40,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:41,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:42,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:43,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:44,benign
+network_monitor,unknown,unknown,,,2025-04-29 11:16:45,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:19,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:20,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:21,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:22,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:23,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:24,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:25,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:26,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:27,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:28,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:29,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:30,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:31,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:32,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:33,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:34,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:35,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:36,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:37,benign
+network_monitor,unknown,unknown,,,2025-04-29 15:20:38,benign
+process_events,example.exe,unknown,,,2025-04-29T10:32:58.528214,benign
+process_events,ransomware.exe,unknown,,,2025-04-29T10:33:01.123456,benign
+process_events,svchost.exe,unknown,,,2025-04-29T15:41:41.329833,benign
+process_events,RuntimeBroker.exe,unknown,,,2025-04-29T15:41:42.336348,benign
+process_events,taskhostw.exe,unknown,,,2025-04-29T15:41:43.339764,benign
+process_events,sppsvc.exe,unknown,,,2025-04-29T15:41:45.356807,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:07,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:08,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:09,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:10,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:11,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:12,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:13,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:14,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:15,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:16,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:17,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:18,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:19,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:20,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:21,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:22,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:23,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:24,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:25,benign
+system_monitor,unknown,unknown,,,2025-04-29 15:19:26,benign
