@@ -1,6 +1,7 @@
 import os
 import json
 import csv
+import re
 
 # ✅ Setup correct paths
 base_dir = os.path.dirname(os.path.abspath(__file__))  # Set base_dir to the root of the project
@@ -19,11 +20,21 @@ if not log_files:
     exit()
 
 # ✅ Continue processing if log files are found
-headers = ["type", "name", "event_type", "yara_match", "extra"]
+# Update the headers to include 'cpu' and 'mem'
+headers = ["type", "name", "event_type", "yara_match", "extra", "cpu", "mem"]
 
 with open(output_csv, "w", newline='', encoding='utf-8') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=headers)
     writer.writeheader()
+
+    # Add this function to extract numeric values from the 'extra' column
+    def extract_numeric_values(extra):
+        cpu = re.search(r'cpu=(\d+)', extra)
+        mem = re.search(r'mem=(\d+)', extra)
+        return {
+            'cpu': int(cpu.group(1)) if cpu else 0,
+            'mem': int(mem.group(1)) if mem else 0
+        }
 
     for log_file in log_files:
         file_path = os.path.join(log_folder, log_file)
@@ -35,26 +46,21 @@ with open(output_csv, "w", newline='', encoding='utf-8') as csvfile:
                 print(f"[!] Skipping invalid JSON file: {log_file}")
                 continue
 
+            # Update the row processing logic to include extracted values
             for event in events:
                 row = {
                     "type": log_file.replace("_log.json", ""),
                     "name": os.path.basename(event.get("src_path", "N/A")),
                     "event_type": event.get("event_type", "N/A"),
                     "yara_match": ",".join(event.get("yara_match", [])) if event.get("yara_match") else "",
-                    "extra": ""
+                    "extra": event.get("extra", "")
                 }
 
-                if "process" in log_file and "pid" in event:
-                    row["extra"] = f"pid={event.get('pid')}, name={event.get('name')}"
+                # Extract CPU and memory values from the 'extra' field
+                extracted = extract_numeric_values(event.get("extra", ""))
+                row.update(extracted)
 
-                if "network" in log_file:
-                    row["extra"] = f"{event.get('protocol', '')}:{event.get('port', '')} {event.get('status', '')}"
-
-                if "system" in log_file:
-                    row["extra"] = f"{event.get('cpu', '')}, mem={event.get('memory', '')}"
-
-                print(f"[DEBUG] Writing row: {row}")
-
+                # Write the row to the CSV
                 writer.writerow(row)
 
 print(f"[INFO] Dataset CSV created successfully at: {output_csv}")

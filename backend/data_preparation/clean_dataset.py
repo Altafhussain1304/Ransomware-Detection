@@ -2,6 +2,7 @@ import os
 import json
 import csv
 from datetime import datetime
+import pandas as pd
 
 # ✅ Set up paths
 base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -62,3 +63,22 @@ with open(output_csv, "w", newline='', encoding="utf-8") as csvfile:
         writer.writerow(entry)
 
 print(f"[INFO] Clean dataset written to: {output_csv}")
+
+# Load the dataset
+df = pd.read_csv(output_csv)
+
+# Preprocess 'yara_match' column to standardize its values
+if 'yara_match' in df.columns:
+    df['yara_match'] = df['yara_match'].apply(lambda x: set(x.split(',')) if isinstance(x, str) else set())
+    if not df['yara_match'].empty and all(isinstance(x, set) for x in df['yara_match']):
+        unique_yara_matches = set.union(*df['yara_match']) - {''}
+        for match in unique_yara_matches:
+            df[f'yara_match_{match.strip()}'] = df['yara_match'].apply(lambda x: 1 if match.strip() in x else 0)
+    df.drop(columns=['yara_match'], inplace=True)
+
+# One-hot encode other categorical columns
+categorical_columns = ['type', 'event_type']
+df = pd.get_dummies(df, columns=categorical_columns, drop_first=True)
+
+# Save the updated dataset
+df.to_csv(output_csv, index=False)
