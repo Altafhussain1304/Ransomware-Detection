@@ -1,0 +1,142 @@
+[
+    {
+        "name": "locky.exe",
+        "event_type": "created",
+        "yara_match": "SuspiciousName",
+        "prediction": "malicious",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "wannacry.exe",
+        "event_type": "renamed",
+        "yara_match": "SuspiciousName",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "abc.exe",
+        "event_type": "renamed",
+        "yara_match": "SuspiciousFileNames",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "wannacry.exe",
+        "event_type": "renamed",
+        "yara_match": "SuspiciousAPI",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "wannacry.exe",
+        "event_type": "modified",
+        "yara_match": "SuspiciousName",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "locky.exe",
+        "event_type": "renamed",
+        "yara_match": "SuspiciousAPI",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "wannacry.exe",
+        "event_type": "renamed",
+        "yara_match": "SuspiciousName",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "teslacrypt.exe",
+        "event_type": "deleted",
+        "yara_match": "SuspiciousName",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "teslacrypt.exe",
+        "event_type": "deleted",
+        "yara_match": "SuspiciousName",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "teslacrypt.exe",
+        "event_type": "renamed",
+        "yara_match": "SuspiciousName",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "locky.exe",
+        "event_type": "modified",
+        "yara_match": "SuspiciousAPI",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "abc.exe",
+        "event_type": "deleted",
+        "yara_match": "SuspiciousName",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "teslacrypt.exe",
+        "event_type": "renamed",
+        "yara_match": "SuspiciousAPI",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "wannacry.exe",
+        "event_type": "deleted",
+        "yara_match": "SuspiciousFileNames",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "abc.exe",
+        "event_type": "created",
+        "yara_match": "SuspiciousAPI",
+        "prediction": "malicious",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "abc.exe",
+        "event_type": "created",
+        "yara_match": "SuspiciousFileNames",
+        "prediction": "malicious",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "abc.exe",
+        "event_type": "deleted",
+        "yara_match": "SuspiciousAPI",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "teslacrypt.exe",
+        "event_type": "created",
+        "yara_match": "SuspiciousName",
+        "prediction": "malicious",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "teslacrypt.exe",
+        "event_type": "modified",
+        "yara_match": "SuspiciousAPI",
+        "prediction": "benign",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    },
+    {
+        "name": "wannacry.exe",
+        "event_type": "created",
+        "yara_match": "SuspiciousFileNames",
+        "prediction": "malicious",
+        "timestamp": "2025-05-02T10:22:31.190029+00:00"
+    }
+]
