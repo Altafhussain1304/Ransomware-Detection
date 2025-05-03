@@ -72,11 +72,12 @@ if __name__ == "__main__":
 
                 all_events.append(event)
 
-                # Save updated log
-                with open(log_path, "w") as f:
-                    json.dump(all_events, f, indent=4)
-
-            known_processes = current_processes
+                # Update known processes after processing new ones
+                known_processes = current_processes
+    
+            # Save updated log as a proper JSON array after processing all new processes
+            with open(log_path, "w") as f:
+                json.dump(all_events, f, indent=4)
             time.sleep(1)
 
     except KeyboardInterrupt:

@@ -4,6 +4,8 @@ import psutil
 from datetime import datetime
 import time
 import sys
+from ai.predictor import predict
+import json
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -37,29 +39,59 @@ def main_menu():
 
 import argparse
 import psutil
-import json
 from datetime import datetime
 import os
 
 # Directory where logs will be stored
-LOG_DIR = "../data/logs"
-os.makedirs(LOG_DIR, exist_ok=True)  # Create logs folder if it doesn't exist
-log_file = os.path.join(LOG_DIR, "process_log.json")  # Path to the log file
+LOG_DIR = "../data/logs/monitor"  # <-- change to monitor folder
+os.makedirs(LOG_DIR, exist_ok=True)
+log_file = os.path.join(LOG_DIR, "monitor_log.json")  # <-- change filename
+
+def append_events(new_events):
+    # Load existing events as a list
+    if os.path.exists(log_file):
+        with open(log_file, "r") as f:
+            try:
+                all_events = json.load(f)
+            except Exception:
+                all_events = []
+    else:
+        all_events = []
+
+    # Append new events (should be a list of dicts)
+    all_events.extend(new_events)
+
+    # Write back as a JSON array
+    with open(log_file, "w") as f:
+        json.dump(all_events, f, indent=2)
 
 def log_processes():
     processes = []
+    MODEL_FEATURES = ["name", "event_type", "yara_match"]
+
     for proc in psutil.process_iter(['pid', 'name', 'username']):
         try:
-            info = proc.info  # Get process info (pid, name, username)
-            info["timestamp"] = datetime.now().isoformat()  # Add timestamp
+            info = proc.info
+            info["timestamp"] = datetime.now().isoformat()
+
+            features = {k: info.get(k, None) for k in MODEL_FEATURES}
+            if features["event_type"] is None:
+                features["event_type"] = "process"
+            if features["yara_match"] is None:
+                features["yara_match"] = "none"
+
+            try:
+                prediction = predict(features)
+                info["prediction"] = prediction
+            except Exception as e:
+                info["prediction"] = "error"
+                print(f"Error during prediction: {e}")
+
             processes.append(info)
         except (psutil.NoSuchProcess, psutil.AccessDenied):
-            continue  # Skip processes that are no longer available or inaccessible
+            continue
 
-    # Write process information to the log file
-    with open(log_file, "a") as f:
-        for p in processes:
-            f.write(json.dumps(p) + "\n")  # Each process info in JSON format
+    append_events(processes)
 
 def main():
     parser = argparse.ArgumentParser(description="RansomSaver Utility")
@@ -67,7 +99,10 @@ def main():
     parser.add_argument("--log-processes", action="store_true", help="Log running processes")
     args = parser.parse_args()
 
-    if args.menu:
+    # Default to menu if no arguments are provided
+    if not any(vars(args).values()):
+        main_menu()
+    elif args.menu:
         main_menu()
     elif args.log_processes:
         print("Logging running processes...")

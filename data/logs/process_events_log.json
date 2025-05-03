@@ -40,5 +40,26 @@
         "name": "sppsvc.exe",
         "create_time": "2025-04-29T15:41:45.008830",
         "suspicious": false
+    },
+    {
+        "timestamp": "2025-05-03T16:51:35.556143",
+        "pid": 3200,
+        "name": "git.exe",
+        "create_time": "2025-05-03T16:51:35.541633",
+        "suspicious": false
+    },
+    {
+        "timestamp": "2025-05-03T16:51:35.556661",
+        "pid": 12348,
+        "name": "conhost.exe",
+        "create_time": "2025-05-03T16:51:35.542911",
+        "suspicious": false
+    },
+    {
+        "timestamp": "2025-05-03T16:51:35.564231",
+        "pid": 8980,
+        "name": "git.exe",
+        "create_time": "2025-05-03T16:51:35.526518",
+        "suspicious": false
     }
 ]
