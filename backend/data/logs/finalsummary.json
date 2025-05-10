@@ -1,0 +1,44 @@
+[
+    {
+        "timestamp": "2025-05-08T10:23:45.517604",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-08T10:23:45.529508",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\data\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-10T11:25:19.647754",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-10T11:25:19.657665",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\data\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-10T11:28:53.327052",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-10T11:28:53.346422",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\data\\quarantine\\testfile.txt"
+    }
+]

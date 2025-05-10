@@ -1,0 +1,8 @@
+import os, time
+
+# Path to the file you want to simulate as "old"
+file_path = r'C:/Users/SuperUser/OneDrive/Desktop/RansomSaver/backend/data/quarantine/old_file.txt'
+
+# Make the file look 8 days old (older than AUTO_DELETE_DAYS=7)
+eight_days_ago = time.time() - (8 * 86400)  # 86400 seconds per day
+os.utime(file_path, (eight_days_ago, eight_days_ago))

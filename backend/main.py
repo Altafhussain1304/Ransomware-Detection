@@ -6,9 +6,25 @@ import time
 import sys
 from ai.predictor import predict
 import json
+from file_actions import auto_delete_if_enabled, quarantine_file
+from utils.notification_utils import send_desktop_alert, get_threat_level_color
+
+# --- Test notification at startup ---
+send_desktop_alert("RansomSaver Test", "Desktop notifications are working!", True)
+# ------------------------------------
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
+
+def handle_threat(file_path, prediction="malicious", notifications_enabled=True):
+    # Send desktop notification
+    color = get_threat_level_color(prediction)
+    alert_msg = f"File/Process '{file_path}' flagged as {prediction.upper()} ({color})"
+    send_desktop_alert("Threat Detected", alert_msg, notifications_enabled)
+    # Handle threat as before
+    deleted = auto_delete_if_enabled(file_path)
+    if not deleted:
+        quarantine_file(file_path)
 
 def main_menu():
     while True:
@@ -38,14 +54,11 @@ def main_menu():
             time.sleep(2)
 
 import argparse
-import psutil
-from datetime import datetime
-import os
 
 # Directory where logs will be stored
-LOG_DIR = "../data/logs/monitor"  # <-- change to monitor folder
+LOG_DIR = "../data/logs/monitor"
 os.makedirs(LOG_DIR, exist_ok=True)
-log_file = os.path.join(LOG_DIR, "monitor_log.json")  # <-- change filename
+log_file = os.path.join(LOG_DIR, "monitor_log.json")
 
 def append_events(new_events):
     # Load existing events as a list
@@ -83,6 +96,8 @@ def log_processes():
             try:
                 prediction = predict(features)
                 info["prediction"] = prediction
+                if prediction == "malicious":
+                    handle_threat(info["name"], prediction)
             except Exception as e:
                 info["prediction"] = "error"
                 print(f"Error during prediction: {e}")

@@ -1,0 +1,226 @@
+[
+    {
+        "timestamp": "2025-05-06T13:09:32.896874",
+        "action": "quarantine",
+        "file_path": "testfile.txt",
+        "status": "success",
+        "details": "Moved to quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T13:09:32.918567",
+        "action": "restore",
+        "file_path": "quarantine/testfile.txt",
+        "status": "success",
+        "details": "Restored to testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T13:09:32.947874",
+        "action": "delete",
+        "file_path": "testfile.txt",
+        "status": "success",
+        "details": "File permanently deleted"
+    },
+    {
+        "timestamp": "2025-05-06T13:09:32.990687",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-06T13:16:31.263927",
+        "action": "quarantine",
+        "file_path": "testfile.txt",
+        "status": "success",
+        "details": "Moved to quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T13:16:31.284188",
+        "action": "restore",
+        "file_path": "quarantine/testfile.txt",
+        "status": "success",
+        "details": "Restored to testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T13:16:31.318546",
+        "action": "delete",
+        "file_path": "testfile.txt",
+        "status": "success",
+        "details": "File permanently deleted"
+    },
+    {
+        "timestamp": "2025-05-06T13:16:31.344011",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-06T14:00:08.905398",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T14:01:40.740797",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T14:01:40.772565",
+        "action": "restore",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt",
+        "status": "success",
+        "details": "Restored to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T14:01:40.798601",
+        "action": "delete",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "File permanently deleted"
+    },
+    {
+        "timestamp": "2025-05-06T14:01:40.821574",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-06T14:02:02.409156",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T14:02:02.435972",
+        "action": "restore",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt",
+        "status": "success",
+        "details": "Restored to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T14:02:02.472978",
+        "action": "delete",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "File permanently deleted"
+    },
+    {
+        "timestamp": "2025-05-06T14:02:02.503133",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-06T14:04:19.800220",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T14:04:19.849947",
+        "action": "restore",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt",
+        "status": "success",
+        "details": "Restored to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T14:04:19.881065",
+        "action": "delete",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "File permanently deleted"
+    },
+    {
+        "timestamp": "2025-05-06T14:04:19.911061",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-06T14:25:55.305022",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-06T14:25:55.341410",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T14:27:27.971336",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-06T14:27:28.009459",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-06T14:33:31.382580",
+        "action": "delete",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "File permanently deleted"
+    },
+    {
+        "timestamp": "2025-05-06T14:34:09.847126",
+        "action": "delete",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "File permanently deleted"
+    },
+    {
+        "timestamp": "2025-05-06T14:35:06.757249",
+        "action": "delete",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "File permanently deleted"
+    },
+    {
+        "timestamp": "2025-05-07T15:00:27.659316",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-07T15:00:27.688513",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-05-07T22:19:10.021654",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "skipped",
+        "details": "Auto-delete disabled in config"
+    },
+    {
+        "timestamp": "2025-05-07T22:19:10.057983",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\quarantine\\testfile.txt"
+    }
+]

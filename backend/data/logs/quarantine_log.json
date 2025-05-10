@@ -1,0 +1,17 @@
+[
+    {
+        "hash": "testfile.txt",
+        "quarantined_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\data\\quarantine\\testfile.txt",
+        "original_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt"
+    },
+    {
+        "hash": "testfile.txt",
+        "quarantined_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\data\\quarantine\\testfile.txt",
+        "original_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt"
+    },
+    {
+        "hash": "testfile.txt",
+        "quarantined_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\data\\quarantine\\testfile.txt",
+        "original_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\testfile.txt"
+    }
+]

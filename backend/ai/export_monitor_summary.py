@@ -1,32 +1,39 @@
 import json
-from datetime import datetime
+import os
 
-monitor_log_path = "../../data/logs/monitor/monitor_log.json"
-summary_output_path = "../../data/logs/monitor/summary_for_ui.json"
+# FIXED PATHS — go up two levels from 'ai' folder
+classified_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'logs', 'simulated', 'classified_simulated_events.json'))
+export_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'logs', 'simulated', 'summary_for_ui.json'))
 
-def export_summary():
-    try:
-        # Load the entire JSON array at once
-        with open(monitor_log_path, "r") as f:
-            events = json.load(f)
+print(f"[📂] Reading from: {classified_path}")
+print(f"[💾] Will export to: {export_path}")
 
-        malicious = sum(1 for e in events if e.get("prediction") == "malicious")
-        benign = sum(1 for e in events if e.get("prediction") == "benign")
+# Check if input file exists
+if not os.path.exists(classified_path):
+    print("[❌] ERROR: Input file does not exist.")
+    exit(1)
 
-        summary = {
-            "total_events": len(events),
-            "malicious": malicious,
-            "benign": benign,
-            "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        }
+# Load classified data
+with open(classified_path, 'r') as f:
+    data = json.load(f)
+    print(f"[📊] Loaded {len(data)} entries.")
 
-        with open(summary_output_path, "w") as f:
-            json.dump(summary, f, indent=4)
+# Prepare summary
+summary_data = []
+for entry in data:
+    summary_data.append({
+        "name": entry.get("name"),
+        "event_type": entry.get("event_type"),
+        "yara_match": entry.get("yara_match"),
+        "prediction": entry.get("prediction"),
+        "timestamp": entry.get("timestamp")
+    })
 
-        print(f"[✔] Exported monitor summary to: {summary_output_path}")
+# Ensure output directory exists
+os.makedirs(os.path.dirname(export_path), exist_ok=True)
 
-    except Exception as e:
-        print(f"[✖] Error exporting summary: {e}")
+# Export for frontend
+with open(export_path, 'w') as f:
+    json.dump(summary_data, f, indent=4)
 
-if __name__ == "__main__":
-    export_summary()
+print(f"[✔] Successfully exported {len(summary_data)} entries to: {export_path}")

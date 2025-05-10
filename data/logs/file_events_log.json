@@ -509,5 +509,745 @@
         "event_type": "initial_scan",
         "src_path": ".\\__pycache__\\yara_scanner.cpython-312.pyc",
         "timestamp": "2025-04-29T15:18:34.726514"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\file_monitor.py",
+        "timestamp": "2025-05-05T21:13:25.397219"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\generate_test_file.py",
+        "timestamp": "2025-05-05T21:13:25.401803",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\main.py",
+        "timestamp": "2025-05-05T21:13:25.709946"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\network_monitor.py",
+        "timestamp": "2025-05-05T21:13:25.715370"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\process_monitor.py",
+        "timestamp": "2025-05-05T21:13:25.721444"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\system_monitor.py",
+        "timestamp": "2025-05-05T21:13:25.731572"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\test_note.txt",
+        "timestamp": "2025-05-05T21:13:25.746551",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\yara_scanner.py",
+        "timestamp": "2025-05-05T21:13:26.063693"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\analyze_results.py",
+        "timestamp": "2025-05-05T21:13:26.066534"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\classify_simulated_events.py",
+        "timestamp": "2025-05-05T21:13:26.076642"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\ai\\encoders.pkl",
+        "timestamp": "2025-05-05T21:13:26.106769",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\encoders.pkl",
+        "timestamp": "2025-05-05T21:13:26.082019",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\export_classified_summary.py",
+        "timestamp": "2025-05-05T21:13:26.426769"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\export_monitor_summary.py",
+        "timestamp": "2025-05-05T21:13:26.429722"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\label_encoder.pkl",
+        "timestamp": "2025-05-05T21:13:26.431741"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\ai\\label_encoder.pkl",
+        "timestamp": "2025-05-05T21:13:26.452059"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\merge_summaries.py",
+        "timestamp": "2025-05-05T21:13:26.455535"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\model.pkl",
+        "timestamp": "2025-05-05T21:13:26.463104"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\ai\\model.pkl",
+        "timestamp": "2025-05-05T21:13:26.482436"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\predictor.py",
+        "timestamp": "2025-05-05T21:13:26.489953",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\train_model.py",
+        "timestamp": "2025-05-05T21:13:26.807669"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\__pycache__\\predictor.cpython-312.pyc",
+        "timestamp": "2025-05-05T21:13:26.807669",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\api\\api_server.py",
+        "timestamp": "2025-05-05T21:13:27.129904"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\api\\test_api.py",
+        "timestamp": "2025-05-05T21:13:27.129904"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\clean_dataset.csv",
+        "timestamp": "2025-05-05T21:13:27.139059",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\clean_dataset.py",
+        "timestamp": "2025-05-05T21:13:27.444617"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\feature_extractor.py",
+        "timestamp": "2025-05-05T21:13:27.448701"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\labeled_dataset.csv",
+        "timestamp": "2025-05-05T21:13:27.453442",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\label_dataset.py",
+        "timestamp": "2025-05-05T21:13:27.758700"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\split_dataset.py",
+        "timestamp": "2025-05-05T21:13:27.763510"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\X.csv",
+        "timestamp": "2025-05-05T21:13:27.766528",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\y.csv",
+        "timestamp": "2025-05-05T21:13:28.071869"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\sim\\simulate_behavior.py",
+        "timestamp": "2025-05-05T21:13:28.076564"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\__pycache__\\yara_scanner.cpython-312.pyc",
+        "timestamp": "2025-05-05T21:13:28.076564"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\config.json",
+        "timestamp": "2025-05-07T15:07:03.304572"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\file_actions.py",
+        "timestamp": "2025-05-07T15:07:03.339729"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\file_monitor.py",
+        "timestamp": "2025-05-07T15:07:03.345882"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\finalsummary.json",
+        "timestamp": "2025-05-07T15:07:03.348626"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\generate_test_file.py",
+        "timestamp": "2025-05-07T15:07:03.348626",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\main.py",
+        "timestamp": "2025-05-07T15:07:03.661495"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\network_monitor.py",
+        "timestamp": "2025-05-07T15:07:03.663505"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\process_monitor.py",
+        "timestamp": "2025-05-07T15:07:03.671434"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\system_monitor.py",
+        "timestamp": "2025-05-07T15:07:03.677595"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\test_file_actions.py",
+        "timestamp": "2025-05-07T15:07:03.683055"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\test_note.txt",
+        "timestamp": "2025-05-07T15:07:03.688147",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\test_note.txt",
+        "timestamp": "2025-05-07T15:07:03.712551",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\yara_scanner.py",
+        "timestamp": "2025-05-07T15:07:04.023497"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\analyze_results.py",
+        "timestamp": "2025-05-07T15:07:04.033227"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\classify_simulated_events.py",
+        "timestamp": "2025-05-07T15:07:04.039122"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\encoders.pkl",
+        "timestamp": "2025-05-07T15:07:04.044155",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\ai\\encoders.pkl",
+        "timestamp": "2025-05-07T15:07:04.060264",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\export_classified_summary.py",
+        "timestamp": "2025-05-07T15:07:04.369476"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\export_monitor_summary.py",
+        "timestamp": "2025-05-07T15:07:04.377179"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\label_encoder.pkl",
+        "timestamp": "2025-05-07T15:07:04.383590"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\ai\\label_encoder.pkl",
+        "timestamp": "2025-05-07T15:07:04.398519"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\merge_summaries.py",
+        "timestamp": "2025-05-07T15:07:04.401499"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\model.pkl",
+        "timestamp": "2025-05-07T15:07:04.408338"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\ai\\model.pkl",
+        "timestamp": "2025-05-07T15:07:04.414276"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\predictor.py",
+        "timestamp": "2025-05-07T15:07:04.426838",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\train_model.py",
+        "timestamp": "2025-05-07T15:07:04.743107"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\__pycache__\\predictor.cpython-312.pyc",
+        "timestamp": "2025-05-07T15:07:04.744614",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\api\\api_server.py",
+        "timestamp": "2025-05-07T15:07:05.057186"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\api\\test_api.py",
+        "timestamp": "2025-05-07T15:07:05.059316"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\clean_dataset.csv",
+        "timestamp": "2025-05-07T15:07:05.068366",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\clean_dataset.py",
+        "timestamp": "2025-05-07T15:07:05.400600"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\feature_extractor.py",
+        "timestamp": "2025-05-07T15:07:05.400600"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\data_preparation\\clean_dataset.csv",
+        "timestamp": "2025-05-07T15:07:05.098054",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\labeled_dataset.csv",
+        "timestamp": "2025-05-07T15:07:05.400600",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\data_preparation\\labeled_dataset.csv",
+        "timestamp": "2025-05-07T15:07:05.430646",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\label_dataset.py",
+        "timestamp": "2025-05-07T15:07:05.739301"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\split_dataset.py",
+        "timestamp": "2025-05-07T15:07:05.748895"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\data_preparation\\X.csv",
+        "timestamp": "2025-05-07T15:07:05.777297",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\X.csv",
+        "timestamp": "2025-05-07T15:07:05.752630",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\y.csv",
+        "timestamp": "2025-05-07T15:07:06.096429"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\data_preparation\\y.csv",
+        "timestamp": "2025-05-07T15:07:06.123169"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\quarantine\\testfile.txt",
+        "timestamp": "2025-05-07T15:07:06.123169"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\sim\\simulate_behavior.py",
+        "timestamp": "2025-05-07T15:07:06.144739"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\__pycache__\\file_actions.cpython-312.pyc",
+        "timestamp": "2025-05-07T15:07:06.152527"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\__pycache__\\yara_scanner.cpython-312.pyc",
+        "timestamp": "2025-05-07T15:07:06.157375"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\config.json",
+        "timestamp": "2025-05-10T11:29:21.961058"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\file_actions.py",
+        "timestamp": "2025-05-10T11:29:21.970827"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\file_monitor.py",
+        "timestamp": "2025-05-10T11:29:21.978870"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\finalsummary.json",
+        "timestamp": "2025-05-10T11:29:21.987319"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\generate_test_file.py",
+        "timestamp": "2025-05-10T11:29:21.990092",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\main.py",
+        "timestamp": "2025-05-10T11:29:22.325878"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\network_monitor.py",
+        "timestamp": "2025-05-10T11:29:22.339782"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\old_file.txt",
+        "timestamp": "2025-05-10T11:29:22.353933"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\process_monitor.py",
+        "timestamp": "2025-05-10T11:29:22.368347"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\system_monitor.py",
+        "timestamp": "2025-05-10T11:29:22.376476"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\test_file_actions.py",
+        "timestamp": "2025-05-10T11:29:22.379995"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\yara_scanner.py",
+        "timestamp": "2025-05-10T11:29:22.391280"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\analyze_results.py",
+        "timestamp": "2025-05-10T11:29:22.398570"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\classify_simulated_events.py",
+        "timestamp": "2025-05-10T11:29:22.406409"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\ai\\encoders.pkl",
+        "timestamp": "2025-05-10T11:29:22.443672",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\encoders.pkl",
+        "timestamp": "2025-05-10T11:29:22.413767",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\export_classified_summary.py",
+        "timestamp": "2025-05-10T11:29:22.781960"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\export_monitor_summary.py",
+        "timestamp": "2025-05-10T11:29:22.783648"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\label_encoder.pkl",
+        "timestamp": "2025-05-10T11:29:22.808672"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\ai\\label_encoder.pkl",
+        "timestamp": "2025-05-10T11:29:22.833539"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\merge_summaries.py",
+        "timestamp": "2025-05-10T11:29:22.843928"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\model.pkl",
+        "timestamp": "2025-05-10T11:29:22.850413"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\ai\\model.pkl",
+        "timestamp": "2025-05-10T11:29:22.867906"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\predictor.py",
+        "timestamp": "2025-05-10T11:29:22.878530",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\train_model.py",
+        "timestamp": "2025-05-10T11:29:23.206182"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\ai\\__pycache__\\predictor.cpython-312.pyc",
+        "timestamp": "2025-05-10T11:29:23.215310",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\api\\api_server.py",
+        "timestamp": "2025-05-10T11:29:23.540118"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\api\\quarantine_utils.py",
+        "timestamp": "2025-05-10T11:29:23.553321"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\api\\test_api.py",
+        "timestamp": "2025-05-10T11:29:23.563940"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\api\\quarantine\\testfile.txt",
+        "timestamp": "2025-05-10T11:29:23.568873"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\api\\__pycache__\\quarantine_utils.cpython-312.pyc",
+        "timestamp": "2025-05-10T11:29:23.581037"
+    },
+    {
+        "event_type": "modified",
+        "src_path": ".\\api\\__pycache__\\quarantine_utils.cpython-312.pyc",
+        "timestamp": "2025-05-10T11:29:23.594091"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data\\action_log.json",
+        "timestamp": "2025-05-10T11:29:23.599981"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data\\logs\\finalsummary.json",
+        "timestamp": "2025-05-10T11:29:23.613885"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data\\logs\\quarantine_log.json",
+        "timestamp": "2025-05-10T11:29:23.643716"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data\\quarantine\\testfile.txt",
+        "timestamp": "2025-05-10T11:29:23.665842"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\clean_dataset.csv",
+        "timestamp": "2025-05-10T11:29:23.674791",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\clean_dataset.py",
+        "timestamp": "2025-05-10T11:29:24.004149"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\feature_extractor.py",
+        "timestamp": "2025-05-10T11:29:24.013984"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\labeled_dataset.csv",
+        "timestamp": "2025-05-10T11:29:24.038216",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\label_dataset.py",
+        "timestamp": "2025-05-10T11:29:24.372122"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\split_dataset.py",
+        "timestamp": "2025-05-10T11:29:24.383809"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\X.csv",
+        "timestamp": "2025-05-10T11:29:24.398130",
+        "yara_matches": [
+            "SuspiciousFileNames"
+        ]
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\data_preparation\\y.csv",
+        "timestamp": "2025-05-10T11:29:24.724129"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\sim\\simulate_behavior.py",
+        "timestamp": "2025-05-10T11:29:24.734102"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\utils\\notification_utils.py",
+        "timestamp": "2025-05-10T11:29:24.751218"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\utils\\test_notify.py",
+        "timestamp": "2025-05-10T11:29:24.755088"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\utils\\__pycache__\\notification_utils.cpython-312.pyc",
+        "timestamp": "2025-05-10T11:29:24.767547"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\__pycache__\\file_actions.cpython-312.pyc",
+        "timestamp": "2025-05-10T11:29:24.781262"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\__pycache__\\test_file_actions.cpython-312.pyc",
+        "timestamp": "2025-05-10T11:29:24.784035"
+    },
+    {
+        "event_type": "initial_scan",
+        "src_path": ".\\__pycache__\\yara_scanner.cpython-312.pyc",
+        "timestamp": "2025-05-10T11:29:24.793842"
     }
 ]
