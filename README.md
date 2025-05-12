@@ -110,17 +110,8 @@ You can toggle simulation mode in `config.py`.
 
 ## 👥 Contributors
 
-* **Backend (Python + FastAPI)**: You
+* **Backend (Python + FastAPI)**: Altaf
 * **Frontend (Flutter + Dart)**: Azim
-
----
-
-## 📅 Project Timeline
-
-* ✅ Backend Development: Completed (Day 1–18)
-* 🚧 Frontend (UI + Integration): In Progress (10-day plan)
-
----
 
 ## 💡 Project Goal
 
