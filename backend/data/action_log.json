@@ -19,5 +19,12 @@
         "timestamp": "2025-05-09 10:34:44",
         "reason": "File was quarantined for too long",
         "auto": true
+    },
+    {
+        "action": "auto-delete",
+        "file": "testfile.txt",
+        "timestamp": "2025-05-23 15:14:15",
+        "reason": "File was quarantined for too long",
+        "auto": true
     }
 ]
