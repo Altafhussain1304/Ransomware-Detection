@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ransom_saver/screens/system_info.dart';
+import 'package:ransom_saver/services/api_service.dart';
 import 'package:ransom_saver/widgets/threat_meter.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,7 +12,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
   bool drawerOpen = false;
-  bool monitoring = false;
+  bool isMonitoring = false;
+  late Future<Map<String, dynamic>> summary;
+
+  @override
+  void initState() {
+    super.initState();
+    summary = ApiService().getSummary();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,13 +104,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 RichText(
                     text: TextSpan(
                   text: 'Monitoring: ',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.bold),
                   children: <TextSpan>[
                     TextSpan(
-                      text: monitoring ? 'ON' : 'OFF',
+                      text: isMonitoring ? 'ON' : 'OFF',
                       style: TextStyle(
                           fontSize: 20,
-                          color: monitoring ? Colors.green : Colors.red,
+                          color: isMonitoring ? Colors.green : Colors.red,
                           fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -110,18 +119,140 @@ class _HomeScreenState extends State<HomeScreen> {
                 ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        monitoring = !monitoring;
+                        isMonitoring = !isMonitoring;
                       });
                     },
                     child: const Text('Start/Stop Monitoring')),
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SystemInfo()));
-                    },
-                    child: const Text('System Info Section')),
+                FutureBuilder(
+                    future: summary,
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return const Center(child: CircularProgressIndicator());
+                      } else if (snapshot.hasData) {
+                        var monitoring = snapshot.data!['monitoring_summary'];
+                        return Column(
+                          children: [
+                            RichText(
+                                text: TextSpan(
+                              text: 'Benign: ',
+                              style: const TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: '${monitoring['benign']}',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.grey.shade300,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            )),
+                            RichText(
+                                text: TextSpan(
+                              text: 'Malicious: ',
+                              style: const TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: '${monitoring['malicious']}',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.grey.shade300,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            )),
+                            RichText(
+                                text: TextSpan(
+                              text: 'Total Events: ',
+                              style: const TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: '${monitoring['total_events']}',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.grey.shade300,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            )),
+                            RichText(
+                                text: TextSpan(
+                              text: 'Last Updated: ',
+                              style: const TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: '${monitoring['last_updated']}',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.grey.shade300,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            )),
+                          ],
+                        );
+                      } else if (snapshot.hasError) {
+                        return const Center(child: Text('Error fetching data'));
+                      } else {
+                        return const Center(child: Text('No data available'));
+                      }
+                    }),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Card(
+                      elevation: 2,
+                      child: Padding(
+                        padding: const EdgeInsets.all(30),
+                        child: Column(
+                          children: [
+                            const Icon(
+                              Icons.memory_rounded,
+                              size: 50,
+                            ),
+                            const SizedBox(height: 20),
+                            Text('32%',
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.blueGrey.shade200,
+                                    fontWeight: FontWeight.bold)),
+                            const SizedBox(height: 8),
+                            const Text('CPU Usage',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold))
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      elevation: 2,
+                      child: Padding(
+                        padding: const EdgeInsets.all(30),
+                        child: Column(
+                          children: [
+                            const Icon(
+                              Icons.speed,
+                              size: 50,
+                            ),
+                            const SizedBox(height: 20),
+                            Text('1.4 GB / 8 GB',
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.blueGrey.shade200,
+                                    fontWeight: FontWeight.bold)),
+                            const SizedBox(height: 8),
+                            const Text('Memory Usage',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold))
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
