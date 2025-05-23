@@ -1,4 +1,3 @@
-
 # 🛡️ RansomSaver
 
 **RansomSaver** is a real-time, AI-powered, cross-platform ransomware detection and prevention system. It combines behavioral monitoring, file/network inspection, machine learning classification, and a modern Flutter frontend — all backed by a modular Python backend.
@@ -19,7 +18,7 @@
 - ✅ JSON-formatted logs and full threat history
 - ✅ VirusTotal upload endpoint (optional)
 - ✅ Summary statistics and visual insights via `/api/summary`
-- ✅ FastAPI backend exposing modular REST APIs
+- ✅ **Flask** backend exposing modular REST APIs
 - ✅ Flutter frontend integration ready
 
 ---
@@ -29,8 +28,10 @@
 ```
 
 RansomSaver/
-├── api\_server.py               # FastAPI backend server
-├── main.py                     # Central runtime to start backend logic
+├── backend/
+│   └── api/
+│       └── api_server.py        # Flask backend server
+├── main.py                      # Central runtime to start backend logic
 ├── monitoring/
 │   ├── file\_monitor.py
 │   ├── process\_monitor.py
@@ -52,7 +53,7 @@ RansomSaver/
 ├── requirements.txt
 └── README.md
 
-````
+```
 
 ---
 
@@ -64,12 +65,12 @@ Make sure you have Python 3.8+ installed. Then run:
 
 ```bash
 pip install -r requirements.txt
-````
+```
 
-### 2. Start the FastAPI Server
+### 2. Start the Flask Server
 
 ```bash
-uvicorn api_server:app --reload
+python backend/api/api_server.py
 ```
 
 ### 3. Start RansomSaver Backend Engine
@@ -79,6 +80,7 @@ python main.py
 ```
 
 ---
+
 
 ## 📡 API Endpoints (Used by Flutter Frontend)
 
@@ -110,22 +112,11 @@ You can toggle simulation mode in `config.py`.
 
 ## 👥 Contributors
 
-* **Backend (Python + FastAPI)**: You
+* **Backend (Python + Flask)**: Altaf
 * **Frontend (Flutter + Dart)**: Azim
-
----
-
-## 📅 Project Timeline
-
-* ✅ Backend Development: Completed (Day 1–18)
-* 🚧 Frontend (UI + Integration): In Progress (10-day plan)
-
----
 
 ## 💡 Project Goal
 
 RansomSaver aims to be a lightweight, real-time anti-ransomware solution inspired by research papers and designed with practical features such as early detection, offline operation, cross-platform support, and full visibility into system behavior.
 
 ---
-
-```

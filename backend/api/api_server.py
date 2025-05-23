@@ -8,9 +8,13 @@ import time
 app = Flask(__name__)
 
 # ---------- Global Paths ----------
-QUARANTINE_DIR = r'C:/Users/SuperUser/OneDrive/Desktop/RansomSaver/backend/data/quarantine'
-ORIGINAL_DIR = r'C:/Users/SuperUser/OneDrive/Desktop/RansomSaver/backend'
-ACTION_LOG_PATH = r'C:/Users/SuperUser/OneDrive/Desktop/RansomSaver/backend/data/action_log.json'
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+QUARANTINE_DIR = os.path.join(BASE_DIR, '../data/quarantine')
+ORIGINAL_DIR = os.path.join(BASE_DIR, '../')
+ACTION_LOG_PATH = os.path.join(BASE_DIR, '../data/action_log.json')
+
+# Ensure quarantine directory exists
+os.makedirs(os.path.abspath(QUARANTINE_DIR), exist_ok=True)
 
 # ---------- Global Configuration ----------
 AUTO_DELETE_DAYS = 7  # Auto-delete files older than 7 days in quarantine
@@ -34,7 +38,7 @@ def log_action(entry):
 @app.route('/api/summary', methods=['GET'])
 def get_summary():
     try:
-        summary_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../data/logs/final_summary.json'))
+        summary_path = os.path.abspath(os.path.join(BASE_DIR, '../../data/logs/final_summary.json'))
         print("[DEBUG] Using path:", summary_path)
         with open(summary_path, 'r') as f:
             data = json.load(f)
@@ -47,7 +51,7 @@ def get_summary():
 @app.route('/api/monitor-summary', methods=['GET'])
 def get_monitor_summary():
     try:
-        path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../data/logs/monitor/summary_for_ui.json'))
+        path = os.path.abspath(os.path.join(BASE_DIR, '../../data/logs/monitor/summary_for_ui.json'))
         print("[DEBUG] Using path:", path)
         with open(path, 'r') as f:
             data = json.load(f)
@@ -60,7 +64,7 @@ def get_monitor_summary():
 @app.route('/api/simulated-summary', methods=['GET'])
 def get_simulated_summary():
     try:
-        path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../data/logs/simulated/summary_for_ui.json'))
+        path = os.path.abspath(os.path.join(BASE_DIR, '../../data/logs/simulated/summary_for_ui.json'))
         print("[DEBUG] Using path:", path)
         with open(path, 'r') as f:
             data = json.load(f)
@@ -98,24 +102,6 @@ def restore_file():
     except Exception as e:
         print("[ERROR] /api/restore:", str(e))
         return jsonify({'error': str(e)}), 500
-
-from flask import request
-from quarantine_utils import simulate_quarantine
-
-@app.route('/api/simulate_quarantine', methods=['POST'])
-def api_simulate_quarantine():
-    try:
-        data = request.get_json()
-        filepath = data.get("filepath")
-
-        if not filepath:
-            return jsonify({"error": "Missing 'filepath' in request."}), 400
-
-        simulate_quarantine(filepath)
-        return jsonify({"message": f"File '{filepath}' quarantined successfully."}), 200
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
 
 # ---------- Endpoint 5: Delete File ----------
 @app.route('/api/delete', methods=['POST'])
