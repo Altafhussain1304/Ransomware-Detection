@@ -8,9 +8,9 @@ import time
 app = Flask(__name__)
 
 # ---------- Global Paths ----------
-QUARANTINE_DIR = r'C:/Users/SuperUser/OneDrive/Desktop/RansomSaver/backend/data/quarantine'
-ORIGINAL_DIR = r'C:/Users/SuperUser/OneDrive/Desktop/RansomSaver/backend'
-ACTION_LOG_PATH = r'C:/Users/SuperUser/OneDrive/Desktop/RansomSaver/backend/data/action_log.json'
+QUARANTINE_DIR = r'../data/quarantine'
+ORIGINAL_DIR = r'../'
+ACTION_LOG_PATH = r'../data/action_log.json'
 
 # ---------- Global Configuration ----------
 AUTO_DELETE_DAYS = 7  # Auto-delete files older than 7 days in quarantine
