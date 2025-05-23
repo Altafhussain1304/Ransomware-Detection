@@ -64,12 +64,12 @@ Make sure you have Python 3.8+ installed. Then run:
 
 ```bash
 pip install -r requirements.txt
-````
+```
 
-### 2. Start the FastAPI Server
+### 2. Start the Flask Server
 
 ```bash
-uvicorn api_server:app --reload
+python backend/api/api_server.py
 ```
 
 ### 3. Start RansomSaver Backend Engine
@@ -79,6 +79,7 @@ python main.py
 ```
 
 ---
+
 
 ## 📡 API Endpoints (Used by Flutter Frontend)
 
@@ -110,7 +111,7 @@ You can toggle simulation mode in `config.py`.
 
 ## 👥 Contributors
 
-* **Backend (Python + FastAPI)**: Altaf
+* **Backend (Python + Flask)**: Altaf
 * **Frontend (Flutter + Dart)**: Azim
 
 ## 💡 Project Goal
