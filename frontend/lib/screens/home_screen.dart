@@ -56,7 +56,17 @@ class _HomeScreenState extends State<HomeScreen> {
             // ),
             // ElevatedButton(
             //     onPressed: () {}, child: const Text('Live Threat Meter')),
-            threatMeter(threatLevel: 'risky'),
+            FutureBuilder(
+                future: summary,
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  } else {
+                    // return threatMeter(
+                    //     threatLevel: snapshot.data!['threat_level']);
+                    return threatMeter(isMonitoring ? 'safe' : 'risky');
+                  }
+                }),
             RichText(
                 text: TextSpan(
               text: 'Monitoring: ',
@@ -84,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(child: CircularProgressIndicator());
                   } else if (snapshot.hasData) {
-                    var monitoring = snapshot.data!;
+                    var monitoring = snapshot.data!['summary'];
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

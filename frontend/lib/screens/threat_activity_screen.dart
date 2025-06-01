@@ -30,41 +30,44 @@ class _ThreatActivityScreenState extends State<ThreatActivityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: FutureBuilder<List<Map<String, dynamic>>>(
-      future: threats,
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
-        } else if (snapshot.hasError) {
-          return const Center(child: Text("Error loading threats"));
-        } else {
-          final items = snapshot.data!;
-          return ListView.builder(
-            itemCount: items.length,
-            itemBuilder: (context, index) {
-              final item = items[index];
-              return Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: ListTile(
-                  leading: Icon(
-                    item['prediction'] == 'malicious'
-                        ? Icons.warning
-                        : Icons.check_circle,
-                    color: item['prediction'] == 'malicious'
-                        ? Colors.red
-                        : Colors.green,
+        body: Padding(
+      padding: const EdgeInsets.all(10),
+      child: FutureBuilder<List<Map<String, dynamic>>>(
+        future: threats,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          } else if (snapshot.hasError) {
+            return const Center(child: Text("Error loading threats"));
+          } else {
+            final items = snapshot.data!;
+            return ListView.builder(
+              itemCount: items.length,
+              itemBuilder: (context, index) {
+                final item = items[index];
+                return Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  title: Text(_formatPascalCase(item['yara_match'])),
-                  subtitle: Text(
-                      'File: ${item['name'] ?? "Unknown"}\nTime: ${item['timestamp'] ?? "Unknown"}'),
-                ),
-              );
-            },
-          );
-        }
-      },
+                  child: ListTile(
+                    leading: Icon(
+                      item['prediction'] == 'malicious'
+                          ? Icons.warning
+                          : Icons.check_circle,
+                      color: item['prediction'] == 'malicious'
+                          ? Colors.red
+                          : Colors.green,
+                    ),
+                    title: Text(_formatPascalCase(item['yara_match'])),
+                    subtitle: Text(
+                        'File: ${item['name'] ?? "Unknown"}\nTime: ${item['timestamp'] ?? "Unknown"}'),
+                  ),
+                );
+              },
+            );
+          }
+        },
+      ),
     ));
   }
 }

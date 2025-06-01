@@ -33,10 +33,14 @@ class _QuarantinePageState extends State<QuarantineScreen> {
             if (data.isEmpty) {
               return Center(child: Text("No files in quarantine"));
             }
+            if (data == null || data.isEmpty) {
+              return const Center(child: Text("No files in quarantine."));
+            }
             return ListView.builder(
               itemCount: data.length,
               itemBuilder: (context, index) {
                 var file = data[index];
+
                 return Card(
                   elevation: 3,
                   margin: EdgeInsets.symmetric(horizontal: 12, vertical: 8),

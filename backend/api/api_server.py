@@ -138,7 +138,7 @@ def list_quarantine_files():
     try:
         files = os.listdir(QUARANTINE_DIR)
         if not files:
-            return jsonify({'message': 'No files in quarantine'}), 200
+            return jsonify({'message': 'No files in quarantine','files':[]}), 200
         return jsonify({'files': files}), 200
     except Exception as e:
         print("[ERROR] /api/quarantine/list:", str(e))
