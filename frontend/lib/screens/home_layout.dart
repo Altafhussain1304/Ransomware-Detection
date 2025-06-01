@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ransom_saver/main.dart';
+import 'package:ransom_saver/screens/home_screen.dart';
+import 'package:ransom_saver/screens/threat_activity_screen.dart';
+import 'package:ransom_saver/screens/action_center_screen.dart';
+import 'package:ransom_saver/screens/settings_screen.dart'; // ✅ Import settings page
 
 class HomeLayout extends StatefulWidget {
   const HomeLayout({super.key});
@@ -9,58 +12,36 @@ class HomeLayout extends StatefulWidget {
 }
 
 class _HomeLayoutState extends State<HomeLayout> {
-  int index = 0;
-  bool drawerOpen = false;
+  int _selectedIndex = 0;
+
+  static final List<Widget> _pages = [
+    const HomeScreen(),
+    const ThreatActivityScreen(),
+    const ActionCenterScreen(),
+    const SettingsPage(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Center(
-          child: DrawerButton(
-            style: IconButton.styleFrom(
-                iconSize: 25, overlayColor: Colors.transparent),
-            onPressed: () {
-              setState(() {
-                drawerOpen = !drawerOpen;
-              });
-            },
-          ),
-        ),
-        toolbarHeight: 35,
-        leadingWidth: 60,
-      ),
-      body: Row(
-        children: [
-          AnimatedContainer(
-            duration: Durations.medium4,
-            width: drawerOpen ? 250 : 60,
-            child: NavigationRail(
-              groupAlignment: -1,
-              extended: drawerOpen,
-              destinations: const [
-                NavigationRailDestination(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  icon: Icon(Icons.home),
-                  label: Text('Home'),
-                ),
-                NavigationRailDestination(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    icon: Icon(Icons.security),
-                    label: Text('Threat Feed')),
-              ],
-              indicatorColor: Colors.deepPurple.shade100.withOpacity(0.8),
-              indicatorShape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-              ),
-              onDestinationSelected: (value) => setState(() {
-                index = value;
-              }),
-              selectedIndex: index,
-            ),
-          ),
-          Expanded(
-            child: pages[index],
-          ),
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Theme.of(context).colorScheme.primary,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.warning), label: 'Threats'),
+          BottomNavigationBarItem(icon: Icon(Icons.security), label: 'Actions'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings), label: 'Settings'),
         ],
       ),
     );
