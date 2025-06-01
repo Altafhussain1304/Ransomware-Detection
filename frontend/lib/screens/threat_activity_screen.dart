@@ -43,18 +43,23 @@ class _ThreatActivityScreenState extends State<ThreatActivityScreen> {
             itemCount: items.length,
             itemBuilder: (context, index) {
               final item = items[index];
-              return ListTile(
-                leading: Icon(
-                  item['prediction'] == 'malicious'
-                      ? Icons.warning
-                      : Icons.check_circle,
-                  color: item['prediction'] == 'malicious'
-                      ? Colors.red
-                      : Colors.green,
+              return Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
                 ),
-                title: Text(_formatPascalCase(item['yara_match'])),
-                subtitle: Text(
-                    'File: ${item['name'] ?? "Unknown"}\nTime: ${item['timestamp'] ?? "Unknown"}'),
+                child: ListTile(
+                  leading: Icon(
+                    item['prediction'] == 'malicious'
+                        ? Icons.warning
+                        : Icons.check_circle,
+                    color: item['prediction'] == 'malicious'
+                        ? Colors.red
+                        : Colors.green,
+                  ),
+                  title: Text(_formatPascalCase(item['yara_match'])),
+                  subtitle: Text(
+                      'File: ${item['name'] ?? "Unknown"}\nTime: ${item['timestamp'] ?? "Unknown"}'),
+                ),
               );
             },
           );
