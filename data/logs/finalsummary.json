@@ -1,0 +1,100 @@
+[
+    {
+        "timestamp": "2025-06-01T19:32:54.411974",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "failure",
+        "details": "[Errno 2] No such file or directory: 'config.json'"
+    },
+    {
+        "timestamp": "2025-06-01T19:32:54.424920",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\data\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-06-01T19:37:46.140660",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "failure",
+        "details": "[Errno 2] No such file or directory: 'config.json'"
+    },
+    {
+        "timestamp": "2025-06-01T19:37:46.174769",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\data\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-06-01T19:39:58.843076",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "failure",
+        "details": "[Errno 2] No such file or directory: 'config.json'"
+    },
+    {
+        "timestamp": "2025-06-01T19:39:58.885134",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\data\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-06-01T19:41:43.716544",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "failure",
+        "details": "[Errno 2] No such file or directory: 'config.json'"
+    },
+    {
+        "timestamp": "2025-06-01T19:41:43.751313",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\data\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-06-01T19:47:10.514800",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "failure",
+        "details": "[Errno 2] No such file or directory: 'config.json'"
+    },
+    {
+        "timestamp": "2025-06-01T19:47:10.547846",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\data\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-06-01T19:47:53.449444",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "failure",
+        "details": "[Errno 2] No such file or directory: 'config.json'"
+    },
+    {
+        "timestamp": "2025-06-01T19:47:53.474174",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\data\\quarantine\\testfile.txt"
+    },
+    {
+        "timestamp": "2025-06-01T19:48:01.781530",
+        "action": "auto_delete",
+        "file_path": "testfile.txt",
+        "status": "failure",
+        "details": "[Errno 2] No such file or directory: 'config.json'"
+    },
+    {
+        "timestamp": "2025-06-01T19:48:01.805900",
+        "action": "quarantine",
+        "file_path": "C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\testfile.txt",
+        "status": "success",
+        "details": "Moved to C:\\Users\\SuperUser\\OneDrive\\Desktop\\RansomSaver\\backend\\data\\quarantine\\testfile.txt"
+    }
+]

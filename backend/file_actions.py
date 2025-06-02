@@ -3,9 +3,10 @@ import shutil
 import json
 from datetime import datetime
 
-QUARANTINE_LOG = "data/logs/quarantine_log.json"
-QUARANTINE_DIR = "data/quarantine"
-FINAL_LOG = "data/logs/finalsummary.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+QUARANTINE_DIR = os.path.join(BASE_DIR, "data", "quarantine")
+QUARANTINE_LOG = os.path.join(BASE_DIR, "data", "logs", "quarantine_log.json")
+FINAL_LOG = os.path.join(BASE_DIR, "data", "logs", "finalsummary.json")
 
 def log_action(action_type, file_path, status, details=""):
     log_entry = {
