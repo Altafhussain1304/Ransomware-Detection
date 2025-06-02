@@ -14,11 +14,26 @@ class _HomeScreenState extends State<HomeScreen> {
   bool drawerOpen = false;
   bool isMonitoring = false;
   late Future<Map<String, dynamic>> summary;
+  late Future<Map<String, dynamic>> settings;
 
   @override
   void initState() {
     super.initState();
     summary = ApiService.getMonitoringSummary();
+    _loadSettings();
+  }
+
+  Future<void> _loadSettings() async {
+    try {
+      final settings = await ApiService.getSettings();
+      setState(() {
+        isMonitoring = settings['monitoring_enabled'] ?? false;
+      });
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Error loading settings')),
+      );
+    }
   }
 
   @override
@@ -62,8 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(child: CircularProgressIndicator());
                   } else {
-                    // return threatMeter(
-                    //     threatLevel: snapshot.data!['threat_level']);
+                    // return threatMeter(snapshot.data!['threat_level']);
                     return threatMeter(isMonitoring ? 'safe' : 'risky');
                   }
                 }),
@@ -82,10 +96,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             )),
             ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    isMonitoring = !isMonitoring;
-                  });
+                onPressed: () async {
+                  await ApiService.updateSetting(
+                      'monitoring_enabled', !isMonitoring);
+                  await _loadSettings();
                 },
                 child: const Text('Start/Stop Monitoring')),
             FutureBuilder(

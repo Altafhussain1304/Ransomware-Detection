@@ -245,10 +245,11 @@ def get_settings():
     try:
         if not os.path.exists(CONFIG_PATH):
             default_settings = {
+                "monitoring_enabled": True,
                 "auto_delete": False,
                 "auto_quarantine": True,
+                "quarantine_folder": "backend/data/quarantine",
                 "scan_frequency": "daily",
-                "notification_level": "high"
             }
             with open(CONFIG_PATH, 'w') as f:
                 json.dump(default_settings, f, indent=4)
@@ -262,20 +263,41 @@ def get_settings():
         return jsonify({'error': str(e)}), 500
 
 # ---------- Endpoint 10: Update Settings ----------
-@app.route('/api/settings', methods=['POST'])
+@app.route('/api/settings', methods=['PUT'])
 def update_settings():
     """
-    Updates config.json with new settings
+    Updates specific settings in config.json while preserving existing ones
     """
     try:
         new_settings = request.json
         if not new_settings:
             return jsonify({'error': 'No settings provided'}), 400
 
-        with open(CONFIG_PATH, 'w') as f:
-            json.dump(new_settings, f, indent=4)
+        # Read existing settings first
+        if os.path.exists(CONFIG_PATH):
+            with open(CONFIG_PATH, 'r') as f:
+                existing_settings = json.load(f)
+        else:
+            # Create default if file doesn't exist
+            existing_settings = {
+                "monitoring_enabled": True,
+                "auto_delete": False,
+                "auto_quarantine": True,
+                "quarantine_folder": "backend/data/quarantine",
+                "scan_frequency": "daily",
+            }
+
+        # Update only the provided keys - this preserves existing ones
+        existing_settings.update(new_settings)
         
-        return jsonify({'message': 'Settings updated successfully'}), 200
+        # Write the merged settings back
+        with open(CONFIG_PATH, 'w') as f:
+            json.dump(existing_settings, f, indent=4)
+        
+        return jsonify({
+            'message': 'Settings updated successfully',
+            'settings': existing_settings
+        }), 200
     except Exception as e:
         print("[ERROR] Update settings:", str(e))
         return jsonify({'error': str(e)}), 500
