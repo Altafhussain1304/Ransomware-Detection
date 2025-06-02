@@ -43,26 +43,37 @@ class _HomeLayoutState extends State<HomeLayout> {
           NavigationRail(
             labelType: NavigationRailLabelType.none,
             extended: _isRailExtended,
-            leading: IconButton(
-              icon: Icon(_isRailExtended ? Icons.menu_open : Icons.menu),
-              onPressed: _toggleRail,
+            leading: Row(
+              children: [
+                if (_isRailExtended)
+                  const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text('RansomSaver',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                IconButton(
+                  icon: Icon(_isRailExtended ? Icons.menu_open : Icons.menu),
+                  onPressed: _toggleRail,
+                ),
+              ],
             ),
+            elevation: 4,
             minWidth: !_isRailExtended ? 56 : 72,
             minExtendedWidth: 200,
-            backgroundColor: Colors.grey[900]?.withAlpha(100),
+            backgroundColor: Colors.grey[900]?.withAlpha(120),
             indicatorColor: Colors.grey[800],
             indicatorShape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
             ),
             destinations: const [
               NavigationRailDestination(
-                  icon: Icon(Icons.home), label: Text('Home')),
+                  icon: Icon(Icons.home_filled), label: Text('Home')),
               NavigationRailDestination(
-                  icon: Icon(Icons.warning), label: Text('Threats')),
+                  icon: Icon(Icons.shield_outlined), label: Text('Threats')),
               NavigationRailDestination(
                   icon: Icon(Icons.security), label: Text('Actions')),
               NavigationRailDestination(
-                  icon: Icon(Icons.settings), label: Text('Settings')),
+                  icon: Icon(Icons.tune), label: Text('Settings')),
             ],
             selectedIndex: _selectedIndex,
             onDestinationSelected: _onItemTapped,

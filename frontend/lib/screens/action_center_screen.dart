@@ -70,24 +70,24 @@ class _ActionCenterScreenState extends State<ActionCenterScreen> {
             itemBuilder: (context, index) {
               var file = files[index];
               return ListTile(
-                title: Text(file['filename']),
+                title: Text(file),
                 // subtitle: Text(
                 //     "Reason: ${file['reason'] ?? 'Unknown'}\nTime: ${file['timestamp'] ?? 'N/A'}"),
-                subtitle: Text("Detected: ${file['detected_time']}"),
+                // subtitle: Text("Detected: ${file['detected_time']}"),
                 trailing: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     IconButton(
                       icon: const Icon(Icons.restore),
-                      onPressed: () => restoreFile(file['filename']),
+                      onPressed: () => restoreFile(file),
                     ),
                     IconButton(
                       icon: const Icon(Icons.delete_forever),
-                      onPressed: () => deleteFile(file['filename']),
+                      onPressed: () => deleteFile(file),
                     ),
                     IconButton(
                       icon: const Icon(Icons.replay_rounded),
-                      onPressed: () => rescanFile(file['filename']),
+                      onPressed: () => rescanFile(file),
                     ),
                   ],
                 ),

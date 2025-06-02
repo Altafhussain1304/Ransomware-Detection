@@ -9,43 +9,13 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  bool autoDelete = false;
   bool loading = true;
   late Future<Map<String, dynamic>> settings;
 
   @override
   void initState() {
     super.initState();
-    loadSettings();
     settings = ApiService.getSettings();
-  }
-
-  void loadSettings() async {
-    try {
-      final settings = await ApiService.getSettings();
-      setState(() {
-        autoDelete = settings['auto_delete'] ?? false;
-        loading = false;
-      });
-    } catch (e) {
-      setState(() {
-        loading = false;
-      });
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Error loading settings')),
-      );
-    }
-  }
-
-  void toggleAutoDelete(bool value) async {
-    setState(() => autoDelete = value);
-    try {
-      await ApiService.updateSetting('auto_delete', value);
-    } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Failed to update setting')),
-      );
-    }
   }
 
   @override
@@ -64,23 +34,45 @@ class _SettingsPageState extends State<SettingsPage> {
           final data = snapshot.data!;
           bool monitoring = data['monitoring_enabled'];
           bool autoDelete = data['auto_delete'];
+          bool autoQuarantine = data['auto_quarantine'];
 
           return Column(
             children: [
               SwitchListTile(
                 title: const Text("Enable Real-time Monitoring"),
                 value: monitoring,
-                onChanged: (val) {
-                  ApiService.updateSetting('monitoring_enabled', val);
-                  setState(() => settings = ApiService.getSettings());
+                onChanged: (val) async {
+                  await ApiService.updateSetting('monitoring_enabled', val);
+
+                  final settings = await ApiService.getSettings();
+                  setState(() {
+                    this.settings = Future.value(settings);
+                    monitoring = settings['monitoring_enabled'];
+                  });
                 },
               ),
               SwitchListTile(
                 title: const Text("Enable Auto Delete"),
                 value: autoDelete,
-                onChanged: (val) {
-                  ApiService.updateSetting('auto_delete', val);
-                  setState(() => settings = ApiService.getSettings());
+                onChanged: (val) async {
+                  await ApiService.updateSetting('auto_delete', val);
+                  final settings = await ApiService.getSettings();
+                  setState(() {
+                    this.settings = Future.value(settings);
+                    autoDelete = settings['auto_delete'];
+                  });
+                },
+              ),
+              SwitchListTile(
+                title: const Text("Enable Auto Quarantine"),
+                value: autoQuarantine,
+                onChanged: (val) async {
+                  await ApiService.updateSetting('auto_quarantine', val);
+                  final settings = await ApiService.getSettings();
+                  setState(() {
+                    this.settings = Future.value(settings);
+                    autoQuarantine = settings['auto_quarantine'];
+                  });
                 },
               ),
               const ListTile(

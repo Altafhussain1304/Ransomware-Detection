@@ -90,8 +90,8 @@ class ApiService {
   }
 
   static Future<bool> updateSetting(String key, dynamic value) async {
-    final response = await http.post(
-      Uri.parse('$baseUrl/settings/update'),
+    final response = await http.put(
+      Uri.parse('$baseUrl/settings'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode({key: value}),
     );
