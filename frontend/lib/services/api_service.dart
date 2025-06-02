@@ -8,7 +8,16 @@ class ApiService {
     final response = await http.get(Uri.parse('$baseUrl/summary'));
     if (response.statusCode == 200) {
       final Map<String, dynamic> data = await jsonDecode(response.body);
-      return data['monitoring_summary'];
+      final summary = data['monitoring_summary'];
+      String threatLevel = 'unknown';
+      if (summary['benign'] == 0 && summary['malicious'] == 0) {
+        threatLevel = 'safe';
+      } else if (summary['benign'] > 0 && summary['malicious'] == 0) {
+        threatLevel = 'unsafe';
+      } else if (summary['benign'] == 0 && summary['malicious'] > 0) {
+        threatLevel = 'risky';
+      }
+      return {'summary': summary, 'threat_level': threatLevel};
     } else {
       throw Exception('Failed to load monitoring summary');
     }
@@ -25,10 +34,11 @@ class ApiService {
   }
 
   static Future<List<dynamic>> getQuarantinedFiles() async {
-    final response = await http.get(Uri.parse('$baseUrl/quarantine'));
+    final response = await http.get(Uri.parse('$baseUrl/quarantine/list'));
 
     if (response.statusCode == 200) {
-      return json.decode(response.body);
+      final data = await json.decode(response.body);
+      return data['files'];
     } else {
       throw Exception('Failed to fetch quarantine list');
     }

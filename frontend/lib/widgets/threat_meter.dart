@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget threatMeter({required String threatLevel}) {
+Widget threatMeter(String threatLevel) {
   switch (threatLevel) {
     case 'safe':
       return const CircleAvatar(
