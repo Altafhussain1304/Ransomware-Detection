@@ -2,6 +2,7 @@ from file_actions import quarantine_file, auto_delete_if_enabled
 import os
 
 test_file = "testfile.txt"
+test_file = "test_note.txt"
 
 # Create a test file
 with open(test_file, "w") as f:

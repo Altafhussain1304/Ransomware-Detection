@@ -12,6 +12,7 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 QUARANTINE_DIR = os.path.join(BASE_DIR, '../data/quarantine')
 ORIGINAL_DIR = os.path.join(BASE_DIR, '../')
 ACTION_LOG_PATH = os.path.join(BASE_DIR, '../data/action_log.json')
+CONFIG_PATH = os.path.join(BASE_DIR, '../config.json')
 
 # Ensure quarantine directory exists
 os.makedirs(os.path.abspath(QUARANTINE_DIR), exist_ok=True)
@@ -234,6 +235,50 @@ def auto_delete_quarantined_files():
                     print(f"[INFO] Auto-deleted {file_name} from quarantine.")
     except Exception as e:
         print("[ERROR] auto_delete_quarantined_files:", str(e))
+
+# ---------- Endpoint 9: Get Settings ----------
+@app.route('/api/settings', methods=['GET'])
+def get_settings():
+    """
+    Reads and returns settings from config.json
+    """
+    try:
+        if not os.path.exists(CONFIG_PATH):
+            default_settings = {
+                "auto_delete": False,
+                "auto_quarantine": True,
+                "scan_frequency": "daily",
+                "notification_level": "high"
+            }
+            with open(CONFIG_PATH, 'w') as f:
+                json.dump(default_settings, f, indent=4)
+            return jsonify(default_settings), 200
+
+        with open(CONFIG_PATH, 'r') as f:
+            settings = json.load(f)
+        return jsonify(settings), 200
+    except Exception as e:
+        print("[ERROR] /api/settings:", str(e))
+        return jsonify({'error': str(e)}), 500
+
+# ---------- Endpoint 10: Update Settings ----------
+@app.route('/api/settings', methods=['POST'])
+def update_settings():
+    """
+    Updates config.json with new settings
+    """
+    try:
+        new_settings = request.json
+        if not new_settings:
+            return jsonify({'error': 'No settings provided'}), 400
+
+        with open(CONFIG_PATH, 'w') as f:
+            json.dump(new_settings, f, indent=4)
+        
+        return jsonify({'message': 'Settings updated successfully'}), 200
+    except Exception as e:
+        print("[ERROR] Update settings:", str(e))
+        return jsonify({'error': str(e)}), 500
 
 # ---------- Start Server ----------
 if __name__ == '__main__':

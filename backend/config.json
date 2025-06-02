@@ -1,4 +1,7 @@
 {
   "auto_delete": false,
-  "quarantine_folder": "./quarantine/"
+  "quarantine_folder": "backend/data/quarantine",
+  "auto_quarantine": true,
+  "scan_frequency": "daily",
+  "notification_level": "high"
 }
